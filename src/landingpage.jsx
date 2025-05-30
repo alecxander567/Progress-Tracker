@@ -39,7 +39,7 @@ function Landingpage() {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link social-icon" href="https://reddit.com" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Reddit" style={{ width: '30px', height: '30px', display: 'block' }} />
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111589.png"  alt="Reddit" style={{ width: '30px', height: '30px', display: 'block' }} />
                   </a>
                 </li>
               </ul>
