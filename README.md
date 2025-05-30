@@ -1,4 +1,6 @@
-# This project aims to help others help keep track of their progress in learning for a more striaght forward and not overwhelming learning journey
+# Progress Tracker App
+
+This project aims to help others help keep track of their progress in learning for a more striaght forward and not overwhelming learning journey
 
 ## Languages Used🧑‍💻 :
 
