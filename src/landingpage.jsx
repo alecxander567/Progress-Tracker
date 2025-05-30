@@ -28,13 +28,19 @@ function Landingpage() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Home</a>
+                  <a className="nav-link social-icon" href="https://github.com" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style={{ width: '30px', height: '30px', filter: 'invert(1)', display: 'block' }} />
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Features</a>
+                  <a className="nav-link social-icon" href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" style={{ width: '30px', height: '30px', display: 'block' }} />
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">About</a>
+                  <a className="nav-link social-icon" href="https://reddit.com" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Reddit" style={{ width: '30px', height: '30px', display: 'block' }} />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -137,6 +143,18 @@ function Landingpage() {
             0% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(180deg); }
             100% { transform: translateY(0px) rotate(360deg); }
+          }
+
+          .social-icon {
+            transition: transform 0.2s ease-in-out !important;
+          }
+          
+          .social-icon:hover {
+            transform: scale(1.1) !important;
+          }
+          
+          .social-icon img {
+            pointer-events: none;
           }
         `}
       </style>
