@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Dev from './assets/dev.png'
+import { Link } from 'react-router-dom';
 
 function Landingpage() {
     return(
@@ -59,11 +60,27 @@ function Landingpage() {
           </div>
           <img src={Dev} alt="Logo" className="mb-4" />
           <div className="container">
-            <h1 className="display-4" style={{ fontWeight: '900' }}>Progress Tracker</h1>
+            <h1 className="display-4" style={{ fontWeight: '900' }}><span className="text-info">Progress</span> Tracker</h1>
             <p className="lead">Track your goals and stay motivated every day</p>
-            <a href="#" className="btn mt-3 shadow-lg" style={{ background: 'linear-gradient(to left, #4b0082, #8a2be2)', color: 'white', padding: '20px 40px', fontWeight: '900', boxShadow: '0 6px #2c004d', borderRadius: '10px', border: 'none', transform: 'translateY(0)', transition: 'transform 0.2s ease-in-out' }} onMouseOver={e => e.currentTarget.style.transform = 'translateY(-4px)'} onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}>
-                  Get Started
-            </a>
+            <Link 
+              to="/courses" 
+              className="btn mt-3 shadow-lg" 
+              style={{ 
+                background: 'linear-gradient(to left, #4b0082, #8a2be2)', 
+                color: 'white', 
+                padding: '20px 40px', 
+                fontWeight: '900', 
+                boxShadow: '0 6px #2c004d', 
+                borderRadius: '10px', 
+                border: 'none', 
+                transform: 'translateY(0)', 
+                transition: 'transform 0.2s ease-in-out' 
+              }} 
+              onMouseOver={e => e.currentTarget.style.transform = 'translateY(-4px)'} 
+              onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}
+            >
+              Get Started
+            </Link>
           </div>
         </header>
          <main className="flex-fill text-center">
@@ -73,7 +90,7 @@ function Landingpage() {
                 <h2>Stay on Track</h2>
                 <p>
                   Our app helps you monitor your daily progress, set targets, and keep yourself accountable.
-                  Whether it's learning, fitness, or personal development — we've got you covered.
+                  Whether it's learning, tech stuffs, Software development or Web Development — we've got you covered.
                 </p>
               </div>
             </div>
@@ -82,7 +99,7 @@ function Landingpage() {
                 <div className="card text-white h-100 shadow" style={{ background: 'rgb(255, 255, 255, 0.2)'}}>
                   <div className="card-body">
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Career Path" className="mb-3" style={{ width: '40px' }} />
-                    <h4 className="card-title">Pick a Career Path</h4>
+                    <h4 className="card-title text-info">Pick a Career Path</h4>
                     <p className="card-text">Choose from a variety of career goals and set your focus on what truly matters to you.</p>
                   </div>
                 </div>
@@ -91,7 +108,7 @@ function Landingpage() {
                 <div className="card text-white h-100 shadow" style={{ background: 'rgb(255, 255, 255, 0.2)'}}>
                   <div className="card-body">
                     <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="Hands-On Learning" className="mb-3" style={{ width: '40px' }} />
-                    <h4 className="card-title">Get Hands-On Learning</h4>
+                    <h4 className="card-title text-info">Get Hands-On Learning</h4>
                     <p className="card-text">Engage with practical exercises and real-world projects to sharpen your skills.</p>
                   </div>
                 </div>
@@ -100,7 +117,7 @@ function Landingpage() {
                 <div className="card text-white h-100 shadow" style={{ background: 'rgb(255, 255, 255, 0.2)'}}>
                   <div className="card-body">
                     <img src="https://cdn-icons-png.flaticon.com/512/3468/3468371.png" alt="Build Portfolio" className="mb-3" style={{ width: '40px' }} />
-                    <h4 className="card-title">Build Your Way Through</h4>
+                    <h4 className="card-title text-info">Build Your Way Through</h4>
                     <p className="card-text">Track progress and build your portfolio step by step as you achieve milestones.</p>
                   </div>
                 </div>
@@ -122,7 +139,6 @@ function Landingpage() {
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
           }
-
           .tech-icons {
             position: absolute;
             width: 100%;
@@ -130,7 +146,6 @@ function Landingpage() {
             z-index: 0;
             overflow: hidden;
           }
-
           .tech-icon {
             position: absolute;
             width: 90px;
@@ -138,7 +153,6 @@ function Landingpage() {
             opacity: 0.3;
             animation: float 20s infinite ease-in-out;
           }
-
           @keyframes float {
             0% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(180deg); }
@@ -148,11 +162,9 @@ function Landingpage() {
           .social-icon {
             transition: transform 0.2s ease-in-out !important;
           }
-          
           .social-icon:hover {
             transform: scale(1.1) !important;
           }
-          
           .social-icon img {
             pointer-events: none;
           }
