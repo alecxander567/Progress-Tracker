@@ -48,7 +48,7 @@ function Landingpage() {
           </div>
         </nav>
 
-        <header className="py-5 d-flex flex-column align-items-center justify-content-center text-center">
+        <header className="py-3 d-flex flex-column align-items-center justify-content-center text-center">
           <div className="tech-icons">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="tech-icon" style={{ top: '10%', left: '15%' }} alt="HTML" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="tech-icon" style={{ top: '40%', left: '70%' }} alt="CSS" />
