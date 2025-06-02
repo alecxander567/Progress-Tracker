@@ -1,18 +1,59 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Landingpage from './landingpage.jsx';
 import Courses from './Courses.jsx';
 import FrontEndPage from './FrontEndPage.jsx';
 import FrontEndCourses from './FrontEndCourses.jsx';
 
 function App() {
+   const [isFirstVisit, setIsFirstVisit] = useState(null);
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  useEffect(() => {
+    const hasVisited = localStorage.getItem('hasVisited');
+    const savedCourse = localStorage.getItem('selectedCourse');
+
+    if (!hasVisited) {
+      setIsFirstVisit(true);
+      localStorage.setItem('hasVisited', 'true');
+    } else {
+      setIsFirstVisit(false);
+    }
+
+    if (savedCourse) {
+      setSelectedCourse(savedCourse);
+    }
+  }, []);
+
+  if (isFirstVisit === null) {
+    return <div>Loading...</div>; 
+  }
+  
   return (
     <Router>
-       <Routes>
-          <Route path='/' element={<Landingpage></Landingpage>}></Route>
-          <Route path='/Courses' element={<Courses></Courses>}></Route>
-          <Route path='/FrontEndPage' element={<FrontEndPage></FrontEndPage>}></Route>
-          <Route path='/FrontEndCourses' element={<FrontEndCourses></FrontEndCourses>}></Route>
-       </Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isFirstVisit ? (
+              <Landingpage
+                onCourseSelect={(course) => {
+                  setSelectedCourse(course);
+                  localStorage.setItem('selectedCourse', course);
+                }}
+              />
+            ) : selectedCourse ? (
+              <Navigate to={`/${selectedCourse}`} replace />
+            ) : (
+              <Navigate to="/FrontEndPage" replace />
+            )
+          }
+        />
+        <Route path='/landing' element={<Landingpage />} />
+        <Route path='/Courses' element={<Courses />} />
+        <Route path='/FrontEndPage' element={<FrontEndPage />} />
+        <Route path='/FrontEndCourses' element={<FrontEndCourses />} />
+      </Routes>
     </Router>
   )
 }

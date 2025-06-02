@@ -11,7 +11,7 @@ function Landingpage() {
         style={{
           background: 'linear-gradient(135deg, #ff00cc, #3333ff, #00ffee)',
           backgroundSize: '400% 400%',
-          animation: 'waveBG 5s ease infinite',
+          animation: 'waveBG 3s ease infinite',
           zIndex: 0,
           opacity: 0.25,
           boxShadow: '0 0 60px rgba(255, 255, 255, 0.2) inset'

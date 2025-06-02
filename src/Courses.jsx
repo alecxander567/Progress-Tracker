@@ -57,7 +57,7 @@ function Courses() {
                 <div className="p-4 bg-dark rounded shadow">
                   <h4 className="text-info mb-3">Software Development</h4>
                   <ul className="list-unstyled">
-                    <li><Link to="/FrontEndCourse" className="course-link">🔹 Front-End Development</Link></li>
+                    <li><Link to="/FrontEndPage" className="course-link">🔹 Front-End Development</Link></li>
                     <li><Link to="/" className="course-link">🔹 Back-End Development</Link></li>
                     <li><Link to="/" className="course-link">🔹 Full-Stack Development</Link></li>
                     <li><Link to="/" className="course-link">🔹 Mobile App Development</Link></li>
