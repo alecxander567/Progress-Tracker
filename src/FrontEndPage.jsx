@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
 
 function FrontEndPage() {
+  const [recentlyWatched, setRecentlyWatched] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const boxTitles = ['My Course', 'Streak', 'Achievements', 'Status'];
   const [streak, setStreak] = useState(42); 
   const [achievements, setAchievements] = useState(5);
   const [status, setStatus] = useState('Ongoing');
   const boxGradients = [
-  'linear-gradient(135deg, #ff6b6b, #f06595)',      
-  'linear-gradient(135deg, #4ecdc4, #556270)',      
-  'linear-gradient(135deg, #a18cd1, #fbc2eb)',      
-  'linear-gradient(135deg, #ffe66d, #ff6f91)',     
+    'linear-gradient(135deg, #ff6b6b, #f06595)',      
+    'linear-gradient(135deg, #4ecdc4, #556270)',      
+    'linear-gradient(135deg, #a18cd1, #fbc2eb)',      
+    'linear-gradient(135deg, #ffe66d, #ff6f91)',     
   ];
   const boxIcons = [
     "fas fa-tachometer-alt",
@@ -21,6 +22,35 @@ function FrontEndPage() {
     "fas fa-award",
     "fas fa-info-circle",
   ];
+  const PROJECTS = [
+    "Build a Personal Portfolio Website",
+    "Create a To-Do List App",
+    "Develop a Weather App using API",
+    "Make a Quiz Application",
+    "Build a Simple Blog with React",
+    "Create a Calculator",
+    "Develop a Responsive Landing Page",
+    "Build a Movie Search App",
+    "Create a Chat Application",
+    "Build a Markdown Previewer"
+  ];
+
+  const [checkedProjects, setCheckedProjects] = useState(() => {
+    const saved = localStorage.getItem('checkedProjects');
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  const toggleCheck = (project) => {
+    let updated;
+    if (checkedProjects.includes(project)) {
+      updated = checkedProjects.filter(p => p !== project);
+    } else {
+      updated = [...checkedProjects, project];
+    }
+
+    setCheckedProjects(updated);
+    localStorage.setItem('checkedProjects', JSON.stringify(updated));
+  };
 
   const toggleStatus = () => {
     setStatus(prev => (prev === 'Ongoing' ? 'Completed' : 'Ongoing'));
@@ -45,14 +75,14 @@ function FrontEndPage() {
         <h4 className="mb-4 fw-bold">My Progress</h4>
         <ul className="nav flex-column gap-3">
           <li className="nav-item">
-            <a className="nav-link text-white" href="#">
+            <Link to="/FrontEndPage" className="nav-link text-white">
               📈 Progress
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-white" href="#">
+            <Link to="/FrontEndCourses" className="nav-link text-white">
               📚 Courses
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link text-white" href="#">
@@ -155,41 +185,70 @@ function FrontEndPage() {
               color: 'white',
               maxHeight: '340px',
               overflowY: 'auto',
-              minWidth: '0', 
-            }}
-          >
-            <h3 className="d-flex align-items-center gap-2">
-              <i className="fas fa-history"></i> Recently Watched
-            </h3>
-            <p>Continue watching...</p>
-            {[...Array(20)].map((_, i) => (
-            <p key={i}>Watched video #{i + 1}</p>
-            ))}
-          </div>
-          <div
-            className="p-3 rounded flex-grow-1"
-            style={{
-              background: 'rgba(255,255,255,0.1)',
-              color: 'white',
-              maxHeight: '340px',
-              overflowY: 'auto',
               minWidth: '0',
             }}
           >
             <h3 className="d-flex align-items-center gap-2">
-              <i className="fas fa-tachometer-alt"></i> Your current progress
+              <i className="fas fa-tasks text-info"></i> Project Suggestions
             </h3>
-          {[
-            { name: 'HTML5 Fundamentals', progress: 100 },
-            { name: 'CSS3 and Responsive Design', progress: 80 },
-            { name: 'JavaScript Basics', progress: 65 },
-            { name: 'Advanced JavaScript (ES6+)', progress: 40 },
-            { name: 'React.js Fundamentals', progress: 25 },
-            { name: 'State Management (Redux, Context API)', progress: 15 },
-            { name: 'CSS Frameworks (Bootstrap, Tailwind CSS)', progress: 50 },
-            { name: 'Web Performance Optimization', progress: 10 },
-            { name: 'Version Control with Git', progress: 70 },
-            { name: 'Testing and Debugging', progress: 5 },
+            <p>Use what you've learned and build these projects to <br></br>challenge yourself</p>
+            <p>Check projects once you finish making them:</p>
+            <ul className="list-unstyled">
+            {PROJECTS.map((project, i) => (
+              <li key={i} className="mb-2">
+                <div
+                  className="project-item d-flex align-items-center gap-2"
+                  onClick={() => toggleCheck(project)}
+              >
+                <input
+                  type="checkbox"
+                  id={`project-${i}`}
+                  checked={checkedProjects.includes(project)}
+                  onChange={() => toggleCheck(project)}
+                  style={{ cursor: 'pointer' }}
+                  onClick={(e) => e.stopPropagation()} 
+                />
+                <label
+                  htmlFor={`project-${i}`}
+                  style={{
+                    cursor: 'pointer',
+                    textDecoration: checkedProjects.includes(project) ? 'line-through' : 'none',
+                    color: checkedProjects.includes(project) ? 'gray' : 'white',
+                    userSelect: 'none'
+                  }}
+                >
+                  {project}
+                </label>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div
+        className="p-3 rounded flex-grow-1"
+        style={{
+          background: 'rgba(255,255,255,0.1)',
+          color: 'white',
+          maxHeight: '340px',
+          overflowY: 'auto',
+          minWidth: '0',
+        }}
+      >
+        <h3 className="d-flex align-items-center gap-2">
+          <i className="fas fa-tachometer-alt text-info"></i> Your current progress
+        </h3>
+        {[
+          { name: 'HTML5 Fundamentals', progress: 100 },
+          { name: 'CSS3 and Responsive Design', progress: 80 },
+          { name: 'JavaScript Basics', progress: 65 },
+          { name: 'Advanced JavaScript (ES6+)', progress: 40 },
+          { name: 'React.js Fundamentals', progress: 25 },
+          { name: 'State Management (Redux, Context API)', progress: 15 },
+          { name: 'CSS Frameworks (Bootstrap, Tailwind CSS)', progress: 50 },
+          { name: 'Web Performance Optimization', progress: 10 },
+          { name: 'Version Control with Git', progress: 70 },
+          { name: 'Testing and Debugging', progress: 5 },
           ].map(({ name, progress }) => (
           <div key={name} className="mb-3">
             <label className="form-label">{name}</label>
@@ -267,6 +326,16 @@ function FrontEndPage() {
           z-index: 4;
         }
       }
+
+      .project-item {
+          padding: 8px 12px;
+          border-radius: 6px;
+          transition: background-color 0.3s ease;
+          cursor: pointer;
+        }
+        .project-item:hover {
+          background-color: rgba(255, 255, 255, 0.15);
+        }
       `}</style>
     </div>
   );
