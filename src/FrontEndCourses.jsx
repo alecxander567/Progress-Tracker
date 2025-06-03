@@ -36,19 +36,14 @@ function FrontEndCourses() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-white" href="#">
+                    <Link to='/Achievements' className="nav-link text-white">
                       🏆 Achievements
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-white" href="#">
-                      👤 Profile
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link text-white" href="#">
+                    <Link to='/Settings' className="nav-link text-white">
                       ⚙️ Settings
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </aside>
@@ -65,7 +60,7 @@ function FrontEndCourses() {
                     className="d-flex justify-content-between align-items-center mb-4"
                     style={{ borderBottom: '1px solid', paddingLeft: '50px', paddingBottom: '10px' }}
                 >
-                    <h1 className="fw-bold m-0">🚀 Front-End Roadmap</h1>
+                    <h1 className="fw-bold m-0"><i className="fas fa-book-open text-info"></i> Courses</h1>
                     <div className="d-flex gap-2">
                     {[
                         { href: "https://github.com", icon: "fab fa-github" },
@@ -89,7 +84,7 @@ function FrontEndCourses() {
                 {[
                     {
                         title: "HTML & CSS Crash Course",
-                        description: "Learn the basics of HTML & CSS in just one video. Get started on building your first webpages. Enjoy!",
+                        description: "Learn the basics of HTML & CSS in just one video. Get started on building your first webpages.",
                         href: "https://youtu.be/HGTJBPNC-Gw?si=AzND80kv-NYedTyo",
                         icons: [
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -98,7 +93,7 @@ function FrontEndCourses() {
                     },
                     {
                         title: "JavaScript Crash Course",
-                        description: "Make your webpages interactive and build your web applications. Enjoy!",
+                        description: "Make your webpages interactive and build your web applications.",
                         href: "https://youtu.be/lfmg-EJ8gm4?si=ntA3c9OuhtNsVoPT",
                         icons: [
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
@@ -106,7 +101,7 @@ function FrontEndCourses() {
                     },
                     {
                         title: "React Crash Course",
-                        description: "Get started with React to level up your front-end development skills. Enjoy!",
+                        description: "Get started with React to level up your front-end development skills.",
                         href: "https://youtu.be/CgkZ7MvWUAA?si=pvGpLDIlzILB-U8T",
                         icons: [
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -130,12 +125,12 @@ function FrontEndCourses() {
                         ]
                     },
                     {
-                        title: "Web Hosting & Deployment",
-                        description: "Learn how to deploy your website online using GitHub Pages, Netlify, or Vercel — for free!",
-                        href: "https://youtu.be/BDdACdrs1vE?si=53Okzg43e9o3eLHF",
-                        icons: [
-                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                        ]
+                      title: "TypeScript Full Course",
+                      description: "Master TypeScript basics and advanced features to write safer and scalable code.",
+                      href: "https://youtu.be/d56mG7DezGs?si=mthj_QulQY6juv3o",
+                      icons: [
+                        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                      ]
                     }
                 ].map(({ title, description, href, icons }, index) => (
                 <div className="col" key={index}>

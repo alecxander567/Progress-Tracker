@@ -25,33 +25,68 @@ function FrontEndPage() {
     "fas fa-info-circle",
   ];
 
-  const PROJECTS = [
-    {
-      name: "Build a Personal Portfolio Website",
-      guide: `1. Create sections: About, Projects, Contact\n2. Use responsive layout with Flexbox/Grid\n3. Add smooth scrolling and animations`,
-      sampleCode: `<section id="about">\n  <h2>About Me</h2>\n  <p>I'm a web developer...</p>\n</section>`
-    },
-    {
-      name: "Create a To-Do List App",
-      guide: `1. Add input to enter tasks\n2. Show tasks in a list\n3. Add delete + mark as done options`,
-      sampleCode: `const [tasks, setTasks] = useState([]);\n<ul>{tasks.map(t => <li>{t}</li>)}</ul>`
-    },
-    {
-      name: "Build a Simple Blog with React",
-      guide: `1. Add post list and post detail views\n2. Use React Router for navigation\n3. Allow users to add new posts`,
-      sampleCode: `<Route path="/post/:id" element={<PostDetail />} />`
-    },
-    {
-      name: "Create a Calculator",
-      guide: `1. Create buttons for digits and operators\n2. Handle input logic with state\n3. Evaluate expression on equals`,
-      sampleCode: `const [result, setResult] = useState("");\n<button onClick={() => setResult(result + "1")}>1</button>`
-    },
-    {
-      name: "Develop a Responsive Landing Page",
-      guide: `1. Use CSS Flexbox/Grid\n2. Add navigation bar and hero section\n3. Make it mobile-friendly`,
-      sampleCode: `<div className="hero">\n  <h1>Welcome</h1>\n</div>`
-    },
-  ];
+  const NEWS = [
+  {
+    title: 'React 18 Released: What You Need to Know',
+    url: 'https://reactjs.org/blog/2022/03/29/react-v18.html',
+    description: 'React 18 introduces concurrent features and improvements to Suspense.',
+    icon: 'react',
+  },
+  {
+    title: 'CSS Container Queries Are Now Supported',
+    url: 'https://css-tricks.com/css-container-queries/',
+    description: 'Container Queries allow styling based on parent size instead of viewport size.',
+    icon: 'css3-alt',
+  },
+  {
+    title: 'TypeScript 5.0 is Here with New Features',
+    url: 'https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/',
+    description: 'The latest version adds improved type inference and performance boosts.',
+    icon: 'code',
+  },
+  {
+    title: 'Vite 4 Released — Faster Build Tool for Front-End',
+    url: 'https://vitejs.dev/guide/',
+    description: 'Vite 4 continues to improve build speed and plugin support for modern web projects.',
+    icon: 'bolt',
+  },
+  {
+    title: 'Using WebAssembly for Front-End Performance Boosts',
+    url: 'https://web.dev/wasm/',
+    description: 'Learn how WebAssembly can help speed up compute-heavy tasks in the browser.',
+    icon: 'cubes',
+  },
+  {
+    title: 'Next.js 14 Brings Server Components to the Forefront',
+    url: 'https://nextjs.org/blog/next-14',
+    description: 'Next.js 14 introduces new optimizations and easier server components support.',
+    icon: 'server',
+  },
+  {
+    title: 'Tailwind CSS 3.3 Released with New Utilities',
+    url: 'https://tailwindcss.com/blog/tailwindcss-v3-3',
+    description: 'Utility-first CSS framework adds new features to speed up UI development.',
+    icon: 'wind',
+  },
+  {
+    title: 'Accessibility Best Practices for Front-End Developers',
+    url: 'https://www.w3.org/WAI/fundamentals/accessibility-intro/',
+    description: 'A guide to making your web apps usable for everyone.',
+    icon: 'universal-access',
+  },
+  {
+    title: 'Understanding React Server Components',
+    url: 'https://reactjs.org/docs/react-server-components.html',
+    description: 'A look into React’s new server-side rendering capabilities.',
+    icon: 'server',
+  },
+  {
+    title: 'State Management Trends in 2025',
+    url: 'https://blog.logrocket.com/state-management-trends-in-2025/',
+    description: 'An overview of how front-end state management is evolving.',
+    icon: 'project-diagram',
+  },
+];
 
   useEffect(() => {
     const today = new Date().toDateString(); // Format: "Mon Jun 2 2025"
@@ -77,10 +112,6 @@ function FrontEndPage() {
     }
   }, []);
 
-  const toggleDropdown = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   useEffect(() => {
     const storedStart = localStorage.getItem('startDate');
     const today = new Date();
@@ -95,6 +126,19 @@ function FrontEndPage() {
       setDayCount(diffDays);
     }
   }, []);
+
+  const focusData = [
+  { skill: 'HTML/CSS', priority: 100 },
+  { skill: 'JavaScript', priority: 90 },
+  { skill: 'Responsive Design', priority: 85 },
+  { skill: 'DOM Manipulation', priority: 80 },
+  { skill: 'Git/GitHub', priority: 75 },
+  { skill: 'React/Vue', priority: 70 },
+  { skill: 'APIs & Fetching Data', priority: 65 },
+  { skill: 'Accessibility (a11y)', priority: 60 },
+  { skill: 'Performance Optimization', priority: 55 },
+  { skill: 'Testing & Debugging', priority: 50 }
+];
 
   return (
     <div
@@ -125,19 +169,14 @@ function FrontEndPage() {
             </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-white" href="#">
+            <Link to='/Achievements' className="nav-link text-white">
               🏆 Achievements
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-white" href="#">
-              👤 Profile
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-white" href="#">
-              ⚙️ Settings
-            </a>
+            <Link to='/Settings' className="nav-link text-white">
+                ⚙️ Settings
+            </Link>
           </li>
         </ul>
       </aside>
@@ -223,100 +262,85 @@ function FrontEndPage() {
             }}
           >
             <h3 className="d-flex align-items-center gap-2">
-              <i className="fas fa-tasks text-info"></i> Project Suggestions
+              <i className="fas fa-newspaper text-info"></i> Front-End Tech News
             </h3>
-            <p>
-              Use what you've learned and build these projects to <br />
-              challenge yourself
-            </p>
-            <p>Suggested projects you can try:</p>
-              <ul className="list-unstyled">
-              {PROJECTS.map((project, i) => (
-                <li
-                  key={i}
-                  onClick={() => toggleDropdown(i)}
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                    borderRadius: '8px',
-                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
-                    padding: '8px 12px',
-                    color: 'white',
-                    cursor: 'pointer',
-                    marginBottom: '8px',
-                  }}
-                >
-                  <div className="d-flex align-items-center justify-content-between">
-                    <div className="d-flex align-items-center gap-2">
-                      <i className="fas fa-lightbulb text-warning"></i>
-                      <span>{project.name}</span>
-                    </div>
-                    <i className={`fas fa-chevron-${openIndex === i ? 'up' : 'down'}`}></i>
-                  </div>
-                  {openIndex === i && (
-                  <div style={{ marginTop: '8px', fontSize: '0.85rem', whiteSpace: 'pre-wrap' }}>
-                    <strong>Steps:</strong> <br />
-                    {project.guide}
-                    <br />
-                    <br />
-                    <strong>Sample Code:</strong>
-                      <pre style={{ background: '#222', padding: '8px', borderRadius: '4px', overflowX: 'auto' }}>
-                      {project.sampleCode}
-                    </pre>
-                  </div>
-                  )}
-                </li>
-                ))}
-              </ul>
-            </div>
-
-            <div
-              className="p-3 rounded flex-grow-1"
-              style={{
-                background: 'rgba(255,255,255,0.1)',
-                color: 'white',
-                maxHeight: '340px',
-                overflowY: 'auto',
-                minWidth: '0',
-              }}
-            >
-              <h3 className="d-flex align-items-center gap-2">
-                <i className="fas fa-lightbulb text-info"></i> Learning Tips & Advice
-              </h3>
-              <p>Just some few advices. Remember consistency is the key : </p>
-              <ul className="list-unstyled">
-              {[
-              "Practice coding daily to build consistency.",
-              "Break big problems into small manageable tasks.",
-              "Understand the concept before copying code.",
-              "Build real projects to apply what you learn.",
-              "Read and understand documentation regularly.",
-              "Ask questions or search when you're stuck.",
-              "Review and refactor your old code often.",
-              "Follow developers on GitHub and learn from open-source.",
-              "Stay updated with web development trends.",
-              "Take breaks to avoid burnout and improve retention."
-            ].map((tip, index) => (
+            <p>Stay updated with the latest trends in front-end development:</p>
+            <ul className="list-unstyled">
+            {NEWS.map((newsItem, i) => (
               <li
-                key={index}
-                className="mb-2"
+                key={i}
                 style={{
                   backgroundColor: 'rgba(255, 255, 255, 0.2)',
                   borderRadius: '8px',
                   boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
                   padding: '8px 12px',
+                  color: 'white',
+                  marginBottom: '12px',
                 }}
               >
-              <div className="d-flex align-items-start gap-2">
-                <i className="fas fa-check-circle text-success mt-1"></i>
-                  <span>{tip}</span>
-              </div>
+                <a
+                  href={newsItem.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#00ffff', textDecoration: 'underline' }}
+                  className="d-flex align-items-center gap-2"
+                >
+                  <i className={`fas fa-${newsItem.icon} text-warning`}></i>
+                  <span>{newsItem.title}</span>
+                </a>
+                <p style={{ fontSize: '0.85rem', marginTop: '4px' }}>{newsItem.description}</p>
               </li>
-              ))}
+                ))}
             </ul>
           </div>
 
-        </div>
-      </main>
+          <div
+            className="p-3 rounded flex-grow-1"
+            style={{
+              background: 'rgba(255,255,255,0.1)',
+              color: 'white',
+              maxHeight: '340px',
+              overflowY: 'auto',
+              minWidth: '0',
+            }}
+          >
+            <h3 className="d-flex align-items-center gap-2">
+              <i className="fas fa-chart-bar text-info"></i> Front-End Focus Breakdown
+            </h3>
+            <p>Technologies you should focus on:</p>
+            <ul className="list-unstyled">
+            {[
+              { tech: "HTML & CSS", percentage: 90 },
+              { tech: "JavaScript", percentage: 85 },
+              { tech: "React", percentage: 70 },
+              { tech: "Bootstrap/Tailwind", percentage: 60 },
+              { tech: "Version Control (Git)", percentage: 50 },
+              { tech: "APIs/Fetch", percentage: 45 },
+              { tech: "Testing/Debugging", percentage: 40 },
+              { tech: "Web Performance", percentage: 35 },
+            ].map((item, index) => (
+              <li key={index} className="mb-3">
+                <div className="d-flex justify-content-between">
+                  <strong>{item.tech}</strong>
+                  <span>{item.percentage}%</span>
+                </div>
+              <div className="progress" style={{ height: '10px' }}>
+                <div
+                  className="progress-bar bg-info"
+                  role="progressbar"
+                  style={{ width: `${item.percentage}%` }}
+                  aria-valuenow={item.percentage}
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+        
+    </div>
+  </main>
 
       <style>{`
         @keyframes waveBG {
@@ -380,19 +404,6 @@ function FrontEndPage() {
         }
         .project-item:hover {
           background-color: rgba(255, 255, 255, 0.15);
-        }
-        .custom-checkbox {
-          width: 18px;
-          height: 18px;
-          border-radius: 50%;
-          border: 2px solid white;
-          display: inline-block;
-          position: relative;
-          transition: background 0.2s ease;
-        }
-        .custom-checkbox.checked {
-          background-color: #0dcaf0; /* Bootstrap info color */
-          border-color: #0dcaf0;
         }
     `}
     </style>

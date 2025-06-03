@@ -4,6 +4,8 @@ import Landingpage from './landingpage.jsx';
 import Courses from './Courses.jsx';
 import FrontEndPage from './FrontEndPage.jsx';
 import FrontEndCourses from './FrontEndCourses.jsx';
+import Achievements from './Achievements.jsx';
+import Settings from './Settings.jsx';
 
 function App() {
    const [isFirstVisit, setIsFirstVisit] = useState(null);
@@ -53,6 +55,8 @@ function App() {
         <Route path='/Courses' element={<Courses />} />
         <Route path='/FrontEndPage' element={<FrontEndPage />} />
         <Route path='/FrontEndCourses' element={<FrontEndCourses />} />
+        <Route path='/Achievements' element={<Achievements></Achievements>}></Route>
+        <Route path='/Settings' element={<Settings></Settings>}></Route>
       </Routes>
     </Router>
   )
