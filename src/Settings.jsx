@@ -68,7 +68,7 @@ function Settings() {
 
                     <div className="d-flex gap-2 me-4">
                         <a
-                            href="https://github.com"
+                            href="https://github.com/alecxander567/Progress-Tracker"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white"
@@ -77,7 +77,7 @@ function Settings() {
                             <i className="fab fa-github"></i>
                         </a>
                         <a
-                            href="https://facebook.com"
+                            href="https://www.facebook.com/alec.xander.espaldon.2024/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white"
@@ -86,7 +86,7 @@ function Settings() {
                             <i className="fab fa-facebook"></i>
                         </a>
                         <a
-                            href="https://reddit.com"
+                            href="https://www.reddit.com/user/Historical_Rub8018/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white"

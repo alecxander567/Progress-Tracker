@@ -29,17 +29,17 @@ function Landingpage() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <a className="nav-link social-icon" href="https://github.com" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
+                  <a className="nav-link social-icon" href="https://github.com/alecxander567/Progress-Tracker" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style={{ width: '30px', height: '30px', filter: 'invert(1)', display: 'block' }} />
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link social-icon" href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
+                  <a className="nav-link social-icon" href="https://www.facebook.com/alec.xander.espaldon.2024/" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" style={{ width: '30px', height: '30px', display: 'block' }} />
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link social-icon" href="https://reddit.com" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
+                  <a className="nav-link social-icon" href="https://www.reddit.com/user/Historical_Rub8018/" target="_blank" rel="noopener noreferrer" style={{ padding: '8px 12px', cursor: 'pointer', zIndex: 10, position: 'relative' }}>
                     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111589.png"  alt="Reddit" style={{ width: '30px', height: '30px', display: 'block' }} />
                   </a>
                 </li>

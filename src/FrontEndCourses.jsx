@@ -68,9 +68,9 @@ function FrontEndCourses() {
                     <h1 className="fw-bold m-0"><i className="fas fa-book-open text-info"></i> Courses</h1>
                     <div className="d-flex gap-2">
                     {[
-                        { href: "https://github.com", icon: "fab fa-github" },
-                        { href: "https://facebook.com", icon: "fab fa-facebook" },
-                        { href: "https://reddit.com", icon: "fab fa-reddit" }
+                        { href: "https://github.com/alecxander567/Progress-Tracker", icon: "fab fa-github" },
+                        { href: "https://www.facebook.com/alec.xander.espaldon.2024/", icon: "fab fa-facebook" },
+                        { href: "https://www.reddit.com/user/Historical_Rub8018/", icon: "fab fa-reddit" }
                     ].map(({ href, icon }, i) => (
                         <a
                             key={i}
