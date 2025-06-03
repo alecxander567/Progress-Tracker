@@ -1,29 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
 
 function FrontEndPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const boxTitles = ['My Course', 'Streak', 'Achievements', 'Status'];
-  const [streak, setStreak] = useState(0); 
-  const [dayCount, setDayCount] = useState(0);
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const achievements = Math.min(Math.floor(streak / 5), 10);
-
-  const boxGradients = [
-    'linear-gradient(135deg, #ff6b6b, #f06595)',      
-    'linear-gradient(135deg, #4ecdc4, #556270)',      
-    'linear-gradient(135deg, #a18cd1, #fbc2eb)',      
-    'linear-gradient(135deg, #ffe66d, #ff6f91)',     
-  ];
-  const boxIcons = [
-    "fas fa-tachometer-alt",
-    "fas fa-fire",
-    "fas fa-award",
-    "fas fa-info-circle",
-  ];
 
   const NEWS = [
   {
@@ -88,58 +69,6 @@ function FrontEndPage() {
   },
 ];
 
-  useEffect(() => {
-    const today = new Date().toDateString(); // Format: "Mon Jun 2 2025"
-    const lastVisit = localStorage.getItem("lastVisitDate");
-    const savedStreak = parseInt(localStorage.getItem("streak") || "0", 10);
-
-    if (!lastVisit) {
-      localStorage.setItem("lastVisitDate", today);
-      localStorage.setItem("streak", "1");
-      setStreak(1);
-    } else if (lastVisit !== today) {
-      const yesterday = new Date();
-      yesterday.setDate(yesterday.getDate() - 1);
-      const wasYesterday = new Date(lastVisit).toDateString() === yesterday.toDateString();
-
-      const newStreak = wasYesterday ? savedStreak + 1 : 1;
-
-      localStorage.setItem("lastVisitDate", today);
-      localStorage.setItem("streak", newStreak.toString());
-      setStreak(newStreak);
-    } else {
-      setStreak(savedStreak);
-    }
-  }, []);
-
-  useEffect(() => {
-    const storedStart = localStorage.getItem('startDate');
-    const today = new Date();
-
-    if (!storedStart) {
-      localStorage.setItem('startDate', today.toISOString());
-      setDayCount(1);
-    } else {
-      const startDate = new Date(storedStart);
-      const diffTime = today.setHours(0,0,0,0) - startDate.setHours(0,0,0,0);
-      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
-      setDayCount(diffDays);
-    }
-  }, []);
-
-  const focusData = [
-  { skill: 'HTML/CSS', priority: 100 },
-  { skill: 'JavaScript', priority: 90 },
-  { skill: 'Responsive Design', priority: 85 },
-  { skill: 'DOM Manipulation', priority: 80 },
-  { skill: 'Git/GitHub', priority: 75 },
-  { skill: 'React/Vue', priority: 70 },
-  { skill: 'APIs & Fetching Data', priority: 65 },
-  { skill: 'Accessibility (a11y)', priority: 60 },
-  { skill: 'Performance Optimization', priority: 55 },
-  { skill: 'Testing & Debugging', priority: 50 }
-];
-
   return (
     <div
       className="position-relative min-vh-100 d-flex overflow-hidden"
@@ -149,37 +78,42 @@ function FrontEndPage() {
       }}
     >
       <aside
-        className={`d-flex flex-column p-4 ${sidebarOpen ? 'open' : ''}`}
-        style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.3)',
-          backdropFilter: 'blur(10px)',
-          zIndex: 2,
-        }}
-      >
-        <h4 className="mb-4 fw-bold">My Progress</h4>
-        <ul className="nav flex-column gap-3">
-          <li className="nav-item">
-            <Link to="/FrontEndPage" className="nav-link text-white">
-              📈 Progress
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/FrontEndCourses" className="nav-link text-white">
-              📚 Courses
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to='/Achievements' className="nav-link text-white">
-              🏆 Achievements
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to='/Settings' className="nav-link text-white">
-                ⚙️ Settings
-            </Link>
-          </li>
-        </ul>
-      </aside>
+          className={`d-flex flex-column p-4 ${sidebarOpen ? 'open' : ''}`}
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            backdropFilter: 'blur(10px)',
+            zIndex: 2,
+          }}
+        >
+          <h4 className="mb-4 fw-bold">My Progress</h4>
+            <ul className="nav flex-column gap-3">
+              <li className="nav-item">
+                <Link to="/FrontEndPage" className="nav-link text-white">
+                  📈 Progress
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/FrontEndCourses" className="nav-link text-white">
+                  📚 Courses
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Achievements" className="nav-link text-white">
+                  💡 Project Ideas
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Terms" className="nav-link text-white">
+                  📄 Terms
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Settings" className="nav-link text-white">
+                  ⚙️ Settings
+                </Link>
+              </li>
+            </ul>
+          </aside>
 
       <button
         className="btn btn-outline-light d-md-none position-fixed top-0 start-0 m-3"
@@ -207,45 +141,35 @@ function FrontEndPage() {
             </a>
           </div>
         </header>
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
-          {boxTitles.map((title, index) => (
-            <div key={index} className="col">
-              <div
-                className="rounded p-3 text-white text-center h-100 d-flex flex-column align-items-center justify-content-center"
-                style={{
-                  background: boxGradients[index],
-                  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
-                  fontWeight: 'bold',
-                  fontSize: '1.1rem',
-                  minHeight: '100px',
-                }}
-              >
-                <div className="d-flex align-items-center gap-2 mb-2">
-                  <i className={boxIcons[index]}></i>
-                  <span>{title}</span>
-                </div>
 
-                {index === 0 && (
-                  <div style={{ fontWeight: 'normal', fontSize: '0.9rem' }}>
-                    Front End Development
-                  </div>
-                )}
-
-                {index === 1 && (
-                  <div style={{ fontWeight: 'normal', fontSize: '1.4rem' }}>{streak}</div>
-                )}
-     
-                {index === 2 && (
-                  <div style={{ fontWeight: 'normal', fontSize: '1.4rem' }}>{achievements}</div>
-                )}    
-
-                {index === 3 && ( 
-                  <div style={{ fontWeight: 'normal', fontSize: '1.4rem' }}>{`Day ${dayCount}`}</div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="row mb-4">
+  <div className="col">
+    <div
+      className="rounded p-4 text-white d-flex flex-column justify-content-center position-relative"
+      style={{
+        background: 'linear-gradient(135deg, #1b0036, #3c096c)',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.4)',
+        fontWeight: 'bold',
+        fontSize: '1.5rem',
+        minHeight: '200px',
+        textAlign: 'left',
+        overflow: 'hidden',
+      }}
+    >
+      <h3>My Career Path : </h3>
+      Front-End Development
+      <div className="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="tech-icon" style={{ position: 'absolute', top: '10%', left: '15%', width: '30px' }} alt="HTML" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="tech-icon" style={{ position: 'absolute', top: '40%', left: '70%', width: '30px' }} alt="CSS" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="tech-icon" style={{ position: 'absolute', top: '70%', left: '25%', width: '30px' }} alt="JavaScript" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="tech-icon" style={{ position: 'absolute', top: '20%', left: '80%', width: '30px' }} alt="React" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" className="tech-icon" style={{ position: 'absolute', top: '30%', left: '40%', width: '30px' }} alt="Bootstrap" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="tech-icon" style={{ position: 'absolute', top: '60%', left: '55%', width: '30px' }} alt="Node.js" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" className="tech-icon" style={{ position: 'absolute', top: '50%', left: '10%', width: '30px' }} alt="GitHub" />
+      </div>
+      </div>
+      </div>
+      </div>
 
         <div
           className="d-flex flex-column flex-md-row gap-3"
@@ -404,6 +328,26 @@ function FrontEndPage() {
         }
         .project-item:hover {
           background-color: rgba(255, 255, 255, 0.15);
+        }
+
+       .tech-icons {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          overflow: hidden;
+        }
+        .tech-icon {
+          position: absolute;
+          width: 90px;
+          height: 90px;
+          opacity: 0.3;
+          animation: float 20s infinite ease-in-out;
+        }
+        @keyframes float {
+          0% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+          100% { transform: translateY(0px) rotate(360deg); }
         }
     `}
     </style>

@@ -23,29 +23,34 @@ function Settings() {
                 }}
             >
                 <h4 className="mb-4 fw-bold">My Progress</h4>
-                <ul className="nav flex-column gap-3">
-                    <li className="nav-item">
-                        <Link to="/FrontEndPage" className="nav-link text-white">
-                            📈 Progress
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/FrontEndCourses" className="nav-link text-white">
-                            📚 Courses
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/Achievements" className="nav-link text-white">
-                            🏆 Achievements
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/Settings" className="nav-link text-white">
-                            ⚙️ Settings
-                        </Link>
-                    </li>
-                </ul>
-            </aside>
+                    <ul className="nav flex-column gap-3">
+                        <li className="nav-item">
+                            <Link to="/FrontEndPage" className="nav-link text-white">
+                                📈 Progress
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/FrontEndCourses" className="nav-link text-white">
+                                📚 Courses
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/Achievements" className="nav-link text-white">
+                                💡 Project Ideas
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/Terms" className="nav-link text-white">
+                                📄 Terms
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/Settings" className="nav-link text-white">
+                                ⚙️ Settings
+                            </Link>
+                        </li>
+                    </ul>
+                </aside>
 
             <button
                 className="btn btn-outline-light d-md-none position-fixed top-0 start-0 m-3 sidebar-toggle-btn"

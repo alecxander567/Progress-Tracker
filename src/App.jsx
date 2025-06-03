@@ -6,6 +6,7 @@ import FrontEndPage from './FrontEndPage.jsx';
 import FrontEndCourses from './FrontEndCourses.jsx';
 import Achievements from './Achievements.jsx';
 import Settings from './Settings.jsx';
+import Terms from './Terms.jsx';
 
 function App() {
    const [isFirstVisit, setIsFirstVisit] = useState(null);
@@ -57,6 +58,7 @@ function App() {
         <Route path='/FrontEndCourses' element={<FrontEndCourses />} />
         <Route path='/Achievements' element={<Achievements></Achievements>}></Route>
         <Route path='/Settings' element={<Settings></Settings>}></Route>
+        <Route path='/Terms' element={<Terms></Terms>}></Route>
       </Routes>
     </Router>
   )

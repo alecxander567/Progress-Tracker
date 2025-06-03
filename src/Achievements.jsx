@@ -6,38 +6,28 @@ import React, { useState, useEffect } from 'react';
 function Achievements() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
-    const defaultAchievements = [
-        { title: 'Built a Responsive Portfolio Website', icon: '🌐', date: '' },
-        { title: 'Created a To-Do List App', icon: '📝', date: '' },
-        { title: 'Developed a Weather Forecast Widget', icon: '☀️', date: '' },
-        { title: 'Made a Calculator Application', icon: '🧮', date: '' },
-        { title: 'Built a Personal Blog Layout', icon: '✍️', date: '' },
-        { title: 'Created a Photo Gallery', icon: '📸', date: '' },
-        { title: 'Designed a Login/Signup Form', icon: '🔐', date: '' },
-        { title: 'Developed a Product Landing Page', icon: '🛒', date: '' },
-        { title: 'Implemented Modal/Popup Components', icon: '📦', date: '' },
-        { title: 'Built a Responsive Navigation Bar', icon: '🧭', date: '' },
-        { title: 'Created a Countdown Timer', icon: '⏰', date: '' },
-        { title: 'Developed a Quiz App', icon: '❓', date: '' },
-        { title: 'Built a CSS Animation Showcase', icon: '🎞️', date: '' },
-        { title: 'Created a Pricing Table', icon: '💲', date: '' },
-        { title: 'Designed a Blog Post Card UI', icon: '📰', date: '' },
-        { title: 'Built a FAQ Accordion', icon: '📖', date: '' },
-        { title: 'Implemented Dark Mode Toggle', icon: '🌙', date: '' },
-        { title: 'Created a Social Media Buttons Set', icon: '🔗', date: '' },
-        { title: 'Built a Responsive Footer', icon: '👣', date: '' },
-        { title: 'Developed a Contact Form with Validation', icon: '📧', date: '' }
-    ]   
-
-
-    const [achievements, setAchievements] = useState(defaultAchievements);
-
-    useEffect(() => {
-        const savedAchievements = localStorage.getItem("achievements");
-        if (savedAchievements) {
-            setAchievements(JSON.parse(savedAchievements));
-        }
-    }, []);
+   const projects = [
+        { title: 'Built a Responsive Portfolio Website', icon: '🌐', stack: 'HTML, CSS, JavaScript, Bootstrap' },
+        { title: 'Created a To-Do List App', icon: '📝', stack: 'React, JavaScript, localStorage' },
+        { title: 'Developed a Weather Forecast Widget', icon: '☀️', stack: 'JavaScript, APIs, CSS' },
+        { title: 'Made a Calculator Application', icon: '🧮', stack: 'JavaScript, HTML, CSS' },
+        { title: 'Built a Personal Blog Layout', icon: '✍️', stack: 'HTML, CSS, React' },
+        { title: 'Created a Photo Gallery', icon: '📸', stack: 'React, CSS Grid, JavaScript' },
+        { title: 'Designed a Login/Signup Form', icon: '🔐', stack: 'React, Formik, Yup, Firebase Auth' },
+        { title: 'Developed a Product Landing Page', icon: '🛒', stack: 'HTML, CSS, JavaScript, Bootstrap' },
+        { title: 'Implemented Modal/Popup Components', icon: '📦', stack: 'React, CSS, JavaScript' },
+        { title: 'Built a Responsive Navigation Bar', icon: '🧭', stack: 'HTML, CSS, JavaScript' },
+        { title: 'Created a Countdown Timer', icon: '⏰', stack: 'JavaScript, React' },
+        { title: 'Developed a Quiz App', icon: '❓', stack: 'React, JavaScript, CSS' },
+        { title: 'Built a CSS Animation Showcase', icon: '🎞️', stack: 'CSS, HTML, JavaScript' },
+        { title: 'Created a Pricing Table', icon: '💲', stack: 'HTML, CSS, JavaScript' },
+        { title: 'Designed a Blog Post Card UI', icon: '📰', stack: 'React, CSS Modules' },
+        { title: 'Built a FAQ Accordion', icon: '📖', stack: 'React, CSS' },
+        { title: 'Implemented Dark Mode Toggle', icon: '🌙', stack: 'React, CSS Variables' },
+        { title: 'Created a Social Media Buttons Set', icon: '🔗', stack: 'HTML, CSS, JavaScript' },
+        { title: 'Built a Responsive Footer', icon: '👣', stack: 'HTML, CSS' },
+        { title: 'Developed a Contact Form with Validation', icon: '📧', stack: 'React, Formik, Yup' },
+    ];
 
     return (
         <div
@@ -56,27 +46,32 @@ function Achievements() {
                 }}
             >
                 <h4 className="mb-4 fw-bold">My Progress</h4>
-                <ul className="nav flex-column gap-3">
-                    <li className="nav-item">
-                        <Link to="/FrontEndPage" className="nav-link text-white">
-                            📈 Progress
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/FrontEndCourses" className="nav-link text-white">
-                            📚 Courses
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/Achievements' className="nav-link text-white">
-                            🏆 Achievements
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                       <Link to='/Settings' className="nav-link text-white">
-                            ⚙️ Settings
-                        </Link>
-                    </li>
+                    <ul className="nav flex-column gap-3">
+                        <li className="nav-item">
+                            <Link to="/FrontEndPage" className="nav-link text-white">
+                                📈 Progress
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/FrontEndCourses" className="nav-link text-white">
+                                📚 Courses
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/Achievements" className="nav-link text-white">
+                                💡 Project Ideas
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/Terms" className="nav-link text-white">
+                                📄 Terms
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/Settings" className="nav-link text-white">
+                                ⚙️ Settings
+                            </Link>
+                        </li>
                 </ul>
             </aside>
 
@@ -87,53 +82,31 @@ function Achievements() {
                 <i className="fas fa-bars"></i>
             </button>
 
-            <main className="flex-grow-1 p-3" style={{ overflowY: 'auto' }}>
+           <main className="flex-grow-1 p-3" style={{ overflowY: 'auto' }}>
                 <header
                     className="d-flex justify-content-between align-items-center mb-4"
-                    style={{
-                        borderBottom: '1px solid',
-                        paddingLeft: '50px',
-                        paddingBottom: '10px',
-                    }}
+                    style={{ borderBottom: '1px solid', paddingLeft: '50px', paddingBottom: '10px' }}
                 >
-                    <h1 className="fw-bold m-0">🏆 Achievements</h1>
+                    <h1 className="fw-bold m-0">💡 Project Ideas</h1>
 
                     <div className="d-flex gap-2">
-                        <a
-                            href="https://github.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white"
-                            style={{ fontSize: '1.5rem' }}
-                        >
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white" style={{ fontSize: '1.5rem' }}>
                             <i className="fab fa-github"></i>
                         </a>
-                        <a
-                            href="https://facebook.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white"
-                            style={{ fontSize: '1.5rem' }}
-                        >
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white" style={{ fontSize: '1.5rem' }}>
                             <i className="fab fa-facebook"></i>
                         </a>
-                        <a
-                            href="https://reddit.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white"
-                            style={{ fontSize: '1.5rem' }}
-                        >
+                        <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" className="text-white" style={{ fontSize: '1.5rem' }}>
                             <i className="fab fa-reddit"></i>
                         </a>
                     </div>
                 </header>
 
                 <div className="row g-4">
-                {achievements.map((achievement, index) => (
+                {projects.map((project, index) => (
                     <div key={index} className="col-md-6 col-lg-4">
                         <div
-                            className="card h-100 text-white d-flex flex-column justify-content-between"
+                            className="card h-100 text-white"
                             style={{
                                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                                 backdropFilter: 'blur(5px)',
@@ -142,30 +115,11 @@ function Achievements() {
                         >
                             <div className="card-body">
                                 <h5 className="card-title">
-                                {achievement.icon} {achievement.title}
+                                {project.icon} {project.title}
                                 </h5>
                                 <p className="card-text">
-                                    <small>
-                                    {achievement.date
-                                    ? `Completed on ${achievement.date}`
-                                    : 'Not completed yet'}
-                                    </small>
+                                    <small>Ideal tech stack: {project.stack}</small>
                                 </p>
-                            </div>
-
-                            <div className="card-footer bg-transparent border-top-0 p-3">
-                                <button
-                                    className="btn btn-outline-light w-100"
-                                    onClick={() => {
-                                        const currentDate = new Date().toLocaleDateString();
-                                        const updatedAchievements = [...achievements];
-                                        updatedAchievements[index].date = currentDate;
-                                        setAchievements(updatedAchievements);
-                                    }}
-                                    disabled={!!achievement.date}
-                                >
-                                {achievement.date ? '✅ Completed' : 'Mark as Completed'}
-                                </button>
                             </div>
                         </div>
                     </div>
