@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landingpage from './landingpage.jsx';
 import Courses from './Courses.jsx';
 import FrontEndPage from './FrontEndPage.jsx';
@@ -18,8 +17,8 @@ function App() {
         <Route path='/FrontEndPage' element={<FrontEndPage />} />
         <Route path='/FrontEndCourses' element={<FrontEndCourses />} />
         <Route path='/Achievements' element={<Achievements></Achievements>}></Route>
-        <Route path='/Settings' element={<Settings></Settings>}></Route>
         <Route path='/Terms' element={<Terms></Terms>}></Route>
+        <Route path='/Settings' element={<Settings></Settings>}></Route>
       </Routes>
     </Router>
   )
