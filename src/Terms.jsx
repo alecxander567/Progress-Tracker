@@ -266,6 +266,7 @@ const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Con
                     backdropFilter: 'blur(10px)',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                    
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.transform = 'translateY(-5px)';
@@ -276,7 +277,7 @@ const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Con
                     e.target.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.2)';
                   }}
                 >
-                  <div className="card-body p-3 p-md-4">
+                  <div className="card-body p-3 p-md-4" style={{ border: "1px solid white", borderRadius: "10px" }}>
                     <div className="d-flex justify-content-between align-items-start mb-2 mb-md-3">
                       <h5 className="card-title fw-bold text-white mb-0 fs-6 fs-md-5">
                         {termData.term}

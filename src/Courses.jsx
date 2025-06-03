@@ -38,7 +38,7 @@ function Courses() {
                 </h1>
                 <button
                   className="btn btn-outline-light"
-                  onClick={() => window.location.href = '/landing'}
+                  onClick={() => window.location.href = '/'}
                   style={{
                     padding: '10px 20px',
                     borderRadius: '8px',

@@ -9,50 +9,11 @@ import Settings from './Settings.jsx';
 import Terms from './Terms.jsx';
 
 function App() {
-   const [isFirstVisit, setIsFirstVisit] = useState(null);
-  const [selectedCourse, setSelectedCourse] = useState(null);
-
-  useEffect(() => {
-    const hasVisited = localStorage.getItem('hasVisited');
-    const savedCourse = localStorage.getItem('selectedCourse');
-
-    if (!hasVisited) {
-      setIsFirstVisit(true);
-      localStorage.setItem('hasVisited', 'true');
-    } else {
-      setIsFirstVisit(false);
-    }
-
-    if (savedCourse) {
-      setSelectedCourse(savedCourse);
-    }
-  }, []);
-
-  if (isFirstVisit === null) {
-    return <div>Loading...</div>; 
-  }
   
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            isFirstVisit ? (
-              <Landingpage
-                onCourseSelect={(course) => {
-                  setSelectedCourse(course);
-                  localStorage.setItem('selectedCourse', course);
-                }}
-              />
-            ) : selectedCourse ? (
-              <Navigate to={`/${selectedCourse}`} replace />
-            ) : (
-              <Navigate to="/landing" replace />
-            )
-          }
-        />
-        <Route path='/landing' element={<Landingpage />} />
+        <Route path='/' element={<Landingpage />} />
         <Route path='/Courses' element={<Courses />} />
         <Route path='/FrontEndPage' element={<FrontEndPage />} />
         <Route path='/FrontEndCourses' element={<FrontEndCourses />} />
