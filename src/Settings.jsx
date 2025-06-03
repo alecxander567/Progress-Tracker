@@ -98,7 +98,7 @@ function Settings() {
                 </header>
 
                 <div className="flex-grow-1 d-flex justify-content-center align-items-center">
-                    <Link to='/' className="btn btn-outline-light px-4 py-2">Change Career Path</Link>
+                    <Link to='/Courses' className="btn btn-outline-light px-4 py-2">Change Career Path</Link>
                 </div>
             </main>
 
