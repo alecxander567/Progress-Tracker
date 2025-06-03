@@ -146,29 +146,29 @@ const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Con
         <h4 className="mb-4 fw-bold">My Progress</h4>
           <ul className="nav flex-column gap-3">
             <li className="nav-item">
-              <a href="/FrontEndPage" className="nav-link text-white">
+              <Link to="/FrontEndPage" className="nav-link text-white">
                 📈 Progress
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/FrontEndCourses" className="nav-link text-white">
+              <Link to="/FrontEndCourses" className="nav-link text-white">
                 📚 Courses
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/Achievements" className="nav-link text-white">
+              <Link to="/Achievements" className="nav-link text-white">
                 💡 Project Ideas
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/Terms" className="nav-link text-white">
+              <Link to="/Terms" className="nav-link text-white">
                 📄 Terms
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/Settings" className="nav-link text-white">
+              <Link to="/Settings" className="nav-link text-white">
                 ⚙️ Settings
-              </a>
+              </Link>
             </li>
           </ul>
         </aside>
