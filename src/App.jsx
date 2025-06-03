@@ -48,7 +48,7 @@ function App() {
             ) : selectedCourse ? (
               <Navigate to={`/${selectedCourse}`} replace />
             ) : (
-              <Navigate to="/FrontEndPage" replace />
+              <Navigate to="/" replace />
             )
           }
         />
