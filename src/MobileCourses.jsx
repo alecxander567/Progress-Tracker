@@ -90,7 +90,7 @@ function MobileCourses() {
                     {
                         title: "Flutter Crash Course",
                         description: "Build beautiful native apps in record time with Flutter.",
-                        href: "https://youtu.be/fq4N0hgOWzU?si=9Brpvd2Gyzf0fVHZ",
+                        href: "https://youtu.be/VPvVD8t02U8?si=GaVi5kJ_kobMpAYj",
                         icons: [
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
@@ -124,7 +124,7 @@ function MobileCourses() {
                     {
                         title: "Firebase for App Dev",
                         description: "Handle authentication, database, and hosting with Firebase.",
-                        href: "https://youtu.be/9kRgVxULbag?si=jloPBhUoiBh-rwRn",
+                        href: "https://youtu.be/fgdpvwEWJ9M?si=pS5IY8lkBqjI_YWt",
                         icons: [
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
                         ],
@@ -136,15 +136,6 @@ function MobileCourses() {
                         icons: [
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-                        ],
-                    },
-                    {
-                        title: "Deploying Mobile Apps",
-                        description: "Publish your app to Google Play and Apple App Store.",
-                        href: "https://youtu.be/jq4m91MsC4c?si=CeLz3XXxfO8C7Bcn",
-                        icons: [
-                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
-                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
                         ],
                     },
                 ].map(({ title, description, href, icons }, index) => (

@@ -148,18 +148,6 @@ function BackEndCourses() {
                             icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"]
                         },
                         {
-                            title: "REST API Crash Course",
-                            description: "Learn how RESTful APIs work and how to build one from scratch.",
-                            href: "https://youtu.be/q-BVwd9H6nE",
-                            icons: ["https://cdn-icons-png.flaticon.com/512/3969/3969690.png"] // Use a REST API icon
-                        },
-                        {
-                            title: "Authentication with JWT",
-                            description: "Secure your API with JSON Web Tokens for user authentication.",
-                            href: "https://youtu.be/mbsmsi7l3r4",
-                            icons: ["https://cdn-icons-png.flaticon.com/512/9196/9196883.png"] // JWT icon
-                        },
-                        {
                             title: "Docker for Beginners",
                             description: "Learn Docker to containerize your applications for easy deployment.",
                             href: "https://youtu.be/3c-iBn73dDE",

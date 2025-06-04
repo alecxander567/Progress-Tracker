@@ -98,7 +98,7 @@ function DataAnalystCourses() {
                         {
                             title: "SQL Crash Course",
                             description: "Master SQL fundamentals to query, filter, and manage data in relational databases.",
-                            href: "https://youtu.be/27axs9dO7AE",
+                            href: "https://youtu.be/7S_tz1z_5bA?si=HYW1Rzg0DxrHU-j2",
                             icons: [
                                 "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
                             ]
@@ -106,7 +106,7 @@ function DataAnalystCourses() {
                         {
                             title: "Excel for Data Analysis",
                             description: "Learn Excel tools like pivot tables, charts, and formulas essential for data work.",
-                            href: "https://youtu.be/2eebptXfEvw",
+                            href: "https://youtu.be/pCJ15nGFgVg?si=wX-Nf0obL22n_MqM",
                             icons: [
                                 "https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png"
                             ]
@@ -114,7 +114,7 @@ function DataAnalystCourses() {
                         {
                             title: "Data Visualization with Tableau",
                             description: "Get started with Tableau to build interactive dashboards and visualizations.",
-                            href: "https://youtu.be/pejCoOZj2ms",
+                            href: "https://youtu.be/aHaOIvR00So?si=kaN43TfutSKPSeUL",
                             icons: [
                                 "https://img.icons8.com/color/48/000000/tableau-software.png"
                             ]
