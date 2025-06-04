@@ -209,7 +209,7 @@ function DataAnalystTerms() {
               <div className="container-fluid">
                 <div className="row mb-3 mb-md-4">
                   <div className="col-12">
-                    <p className="lead mb-3 mb-md-4 fs-6 fs-md-5">Master the essential vocabulary of front-end development</p>
+                    <p className="lead mb-3 mb-md-4 fs-6 fs-md-5">Master the essential vocabulary of Data Analyst</p>
               
                     <div className="row g-2 g-md-3 mb-3 mb-md-4">
                       <div className="col-12 col-sm-6 col-md-6">
