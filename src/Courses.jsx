@@ -60,7 +60,7 @@ function Courses() {
                     <li><Link to="/FrontEndPage" className="course-link">🔹 Front-End Development</Link></li>
                     <li><Link to="/BackEndPage" className="course-link">🔹 Back-End Development</Link></li>
                     <li><Link to="/FullStackPage" className="course-link">🔹 Full-Stack Development</Link></li>
-                    <li><Link to="/" className="course-link">🔹 Mobile App Development</Link></li>
+                    <li><Link to="/MobilePage" className="course-link">🔹 Mobile App Development</Link></li>
                     <li><Link to="/" className="course-link">🔹 Game Development</Link></li>
                    </ul>
                 </div>
