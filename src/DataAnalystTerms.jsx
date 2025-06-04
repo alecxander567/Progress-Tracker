@@ -3,130 +3,131 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
 
-function Terms() {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+function DataAnalystTerms() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
    const terms = [
     {
-      term: "HTML",
-      category: "Markup",
-      definition: "HyperText Markup Language - the standard markup language for creating web pages and web applications.",
-      example: "<div>, <p>, <h1>"
+        term: "Pandas",
+        category: "Library",
+        definition: "An open-source Python library for data manipulation and analysis, especially with tabular data.",
+        example: "df = pd.read_csv('data.csv')"
     },
     {
-      term: "CSS",
-      category: "Styling",
-      definition: "Cascading Style Sheets - used to describe the presentation of a document written in HTML or XML.",
-      example: "color: blue; margin: 10px;"
+        term: "NumPy",
+        category: "Library",
+        definition: "A fundamental package for scientific computing with Python, providing support for arrays and mathematical operations.",
+        example: "np.mean(data), np.array([1, 2, 3])"
     },
     {
-      term: "JavaScript",
-      category: "Programming",
-      definition: "A high-level, interpreted programming language that enables interactive web pages and dynamic content.",
-      example: "document.getElementById('demo')"
+        term: "Data Cleaning",
+        category: "Process",
+        definition: "The process of identifying and correcting errors or inconsistencies in data to improve its quality.",
+        example: "df.dropna(), df.fillna(0)"
     },
     {
-      term: "React",
-      category: "Framework",
-      definition: "A JavaScript library for building user interfaces, particularly single-page applications with reusable components.",
-      example: "useState, useEffect, JSX"
+        term: "Data Visualization",
+        category: "Process",
+        definition: "The graphical representation of information and data using charts, plots, and graphs.",
+        example: "plt.bar(x, y), sns.heatmap(df.corr())"
     },
     {
-      term: "DOM",
-      category: "Concepts",
-      definition: "Document Object Model - a programming interface for HTML and XML documents representing the page structure.",
-      example: "document.querySelector('.class')"
+        term: "SQL",
+        category: "Language",
+        definition: "Structured Query Language - used to communicate with and manipulate relational databases.",
+        example: "SELECT * FROM users WHERE age > 25;"
     },
     {
-      term: "Responsive Design",
-      category: "Concepts",
-      definition: "An approach to web design that makes web pages render well on different devices and screen sizes.",
-      example: "Media queries, flexbox, grid"
+        term: "Power BI",
+        category: "Tool",
+        definition: "A Microsoft business analytics tool that allows you to visualize data and share insights.",
+        example: "Creating dashboards using data from Excel or SQL Server"
     },
     {
-      term: "Bootstrap",
-      category: "Framework",
-      definition: "A popular CSS framework for developing responsive and mobile-first websites quickly.",
-      example: "container, row, col-md-6"
+        term: "Tableau",
+        category: "Tool",
+        definition: "A data visualization software used for converting raw data into an understandable format.",
+        example: "Line charts, bar graphs, filters"
     },
     {
-      term: "Flexbox",
-      category: "Styling",
-      definition: "A CSS layout method for arranging items in rows or columns with flexible sizing and alignment.",
-      example: "display: flex; justify-content: center;"
+        term: "Jupyter Notebook",
+        category: "Tool",
+        definition: "An open-source web application for creating and sharing documents with live code, equations, and visualizations.",
+        example: "# Python cells with markdown, plots, and code"
     },
     {
-      term: "Grid",
-      category: "Styling",
-      definition: "CSS Grid Layout is a two-dimensional layout system for creating complex responsive layouts.",
-      example: "display: grid; grid-template-columns: 1fr 1fr;"
+        term: "ETL",
+        category: "Process",
+        definition: "Extract, Transform, Load - a data pipeline process to extract data from sources, transform it, and load it into a destination system.",
+        example: "Extract from CSV → Clean in Python → Load to SQL"
     },
     {
-      term: "API",
-      category: "Concepts",
-      definition: "Application Programming Interface - a set of protocols and tools for building software applications.",
-      example: "fetch(), REST, GraphQL"
+        term: "KPI",
+        category: "Concept",
+        definition: "Key Performance Indicator - measurable values that demonstrate how effectively objectives are being achieved.",
+        example: "Monthly Sales Growth, Customer Retention Rate"
     },
     {
-      term: "AJAX",
-      category: "Programming",
-      definition: "Asynchronous JavaScript and XML - technique for creating fast, dynamic web pages without page reloads.",
-      example: "XMLHttpRequest, fetch()"
+        term: "Correlation",
+        category: "Concept",
+        definition: "A statistical measure that describes the extent to which two variables are related.",
+        example: "df.corr(), Pearson's r"
     },
     {
-      term: "JSON",
-      category: "Data",
-      definition: "JavaScript Object Notation - a lightweight data interchange format that's easy to read and write.",
-      example: '{"name": "John", "age": 30}'
+        term: "A/B Testing",
+        category: "Concept",
+        definition: "A statistical method of comparing two versions of a variable to determine which performs better.",
+        example: "Test group A vs group B conversion rates"
     },
     {
-      term: "SPA",
-      category: "Concepts",
-      definition: "Single Page Application - a web app that loads a single HTML page and dynamically updates content.",
-      example: "React Router, Vue Router"
+        term: "Time Series",
+        category: "Concept",
+        definition: "A sequence of data points collected or recorded at time intervals.",
+        example: "Forecasting sales with ARIMA"
     },
     {
-      term: "PWA",
-      category: "Concepts",
-      definition: "Progressive Web App - web applications that use modern web capabilities to deliver app-like experiences.",
-      example: "Service workers, web manifest"
+        term: "Dashboard",
+        category: "Output",
+        definition: "A visual display of key metrics and trends, typically used to monitor performance in real time.",
+        example: "Interactive Power BI dashboard"
     },
     {
-      term: "Webpack",
-      category: "Tools",
-      definition: "A static module bundler for JavaScript applications that bundles modules and assets.",
-      example: "webpack.config.js, loaders"
+        term: "Feature Engineering",
+        category: "Process",
+        definition: "The process of selecting, modifying, or creating new features to improve the performance of machine learning models.",
+        example: "df['age_group'] = df['age'] // 10"
     },
     {
-      term: "npm",
-      category: "Tools",
-      definition: "Node Package Manager - the default package manager for Node.js, used to install and manage dependencies.",
-      example: "npm install, package.json"
+        term: "Data Wrangling",
+        category: "Process",
+        definition: "The process of cleaning, structuring, and enriching raw data into a desired format for analysis.",
+        example: "Combining multiple CSVs into one DataFrame"
     },
     {
-      term: "Git",
-      category: "Tools",
-      definition: "A distributed version control system for tracking changes in source code during software development.",
-      example: "git commit, git push, git merge"
+        term: "Machine Learning",
+        category: "Concept",
+        definition: "A field of AI that enables systems to learn patterns from data and make predictions.",
+        example: "Training a model using scikit-learn"
     },
     {
-      term: "Sass/SCSS",
-      category: "Styling",
-      definition: "Syntactically Awesome Style Sheets - a CSS preprocessor that adds features like variables and nesting.",
-      example: "$primary-color: #333; .nav { color: $primary-color; }"
+        term: "Open Data",
+        category: "Concept",
+        definition: "Data that is freely available to everyone to use, reuse, and redistribute.",
+        example: "World Bank Open Data, Kaggle datasets"
     }
-  ];
+    ];
 
-const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Concepts', 'Data', 'Tools'];
+    const categories = ['All', 'Library', 'Process', 'Language', 'Tool', 'Concept', 'Output'];
 
-  const filteredTerms = terms.filter(term => {
-    const matchesSearch = term.term.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const filteredTerms = terms.filter(term => {
+        const matchesSearch = term.term.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          term.definition.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || term.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+        const matchesCategory = selectedCategory === 'All' || term.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
+    
     return (
         <div
           className="position-relative min-vh-100 d-flex overflow-hidden"
@@ -146,27 +147,27 @@ const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Con
             <h4 className="mb-4 fw-bold">My Progress</h4>
               <ul className="nav flex-column gap-3">
                 <li className="nav-item">
-                  <Link to="/FrontEndPage" className="nav-link text-white">
+                  <Link to="/DataAnalystPage" className="nav-link text-white">
                     📈 Progress
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/FrontEndCourses" className="nav-link text-white">
+                  <Link to="/DataAnalystCourses" className="nav-link text-white">
                     📚 Courses
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/Achievements" className="nav-link text-white">
+                  <Link to="/DataProjectIdeas" className="nav-link text-white">
                     💡 Project Ideas
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/Terms" className="nav-link text-white">
+                  <Link to="/DataAnalystTerms" className="nav-link text-white">
                     📄 Terms
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/Settings" className="nav-link text-white">
+                  <Link to="/DataAnalystSettings" className="nav-link text-white">
                     ⚙️ Settings
                   </Link>
                 </li>
@@ -422,4 +423,4 @@ function getCategoryColor(category) {
   return colors[category] || '#6c757d';
 }
 
-export default Terms;
+export default DataAnalystTerms;

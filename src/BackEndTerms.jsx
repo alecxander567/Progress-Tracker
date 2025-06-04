@@ -3,123 +3,123 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
 
-function Terms() {
+function BackEndTerms() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
    const terms = [
-    {
-      term: "HTML",
-      category: "Markup",
-      definition: "HyperText Markup Language - the standard markup language for creating web pages and web applications.",
-      example: "<div>, <p>, <h1>"
-    },
-    {
-      term: "CSS",
-      category: "Styling",
-      definition: "Cascading Style Sheets - used to describe the presentation of a document written in HTML or XML.",
-      example: "color: blue; margin: 10px;"
-    },
-    {
-      term: "JavaScript",
-      category: "Programming",
-      definition: "A high-level, interpreted programming language that enables interactive web pages and dynamic content.",
-      example: "document.getElementById('demo')"
-    },
-    {
-      term: "React",
-      category: "Framework",
-      definition: "A JavaScript library for building user interfaces, particularly single-page applications with reusable components.",
-      example: "useState, useEffect, JSX"
-    },
-    {
-      term: "DOM",
-      category: "Concepts",
-      definition: "Document Object Model - a programming interface for HTML and XML documents representing the page structure.",
-      example: "document.querySelector('.class')"
-    },
-    {
-      term: "Responsive Design",
-      category: "Concepts",
-      definition: "An approach to web design that makes web pages render well on different devices and screen sizes.",
-      example: "Media queries, flexbox, grid"
-    },
-    {
-      term: "Bootstrap",
-      category: "Framework",
-      definition: "A popular CSS framework for developing responsive and mobile-first websites quickly.",
-      example: "container, row, col-md-6"
-    },
-    {
-      term: "Flexbox",
-      category: "Styling",
-      definition: "A CSS layout method for arranging items in rows or columns with flexible sizing and alignment.",
-      example: "display: flex; justify-content: center;"
-    },
-    {
-      term: "Grid",
-      category: "Styling",
-      definition: "CSS Grid Layout is a two-dimensional layout system for creating complex responsive layouts.",
-      example: "display: grid; grid-template-columns: 1fr 1fr;"
-    },
-    {
-      term: "API",
-      category: "Concepts",
-      definition: "Application Programming Interface - a set of protocols and tools for building software applications.",
-      example: "fetch(), REST, GraphQL"
-    },
-    {
-      term: "AJAX",
-      category: "Programming",
-      definition: "Asynchronous JavaScript and XML - technique for creating fast, dynamic web pages without page reloads.",
-      example: "XMLHttpRequest, fetch()"
-    },
-    {
-      term: "JSON",
-      category: "Data",
-      definition: "JavaScript Object Notation - a lightweight data interchange format that's easy to read and write.",
-      example: '{"name": "John", "age": 30}'
-    },
-    {
-      term: "SPA",
-      category: "Concepts",
-      definition: "Single Page Application - a web app that loads a single HTML page and dynamically updates content.",
-      example: "React Router, Vue Router"
-    },
-    {
-      term: "PWA",
-      category: "Concepts",
-      definition: "Progressive Web App - web applications that use modern web capabilities to deliver app-like experiences.",
-      example: "Service workers, web manifest"
-    },
-    {
-      term: "Webpack",
-      category: "Tools",
-      definition: "A static module bundler for JavaScript applications that bundles modules and assets.",
-      example: "webpack.config.js, loaders"
-    },
-    {
-      term: "npm",
-      category: "Tools",
-      definition: "Node Package Manager - the default package manager for Node.js, used to install and manage dependencies.",
-      example: "npm install, package.json"
-    },
-    {
-      term: "Git",
-      category: "Tools",
-      definition: "A distributed version control system for tracking changes in source code during software development.",
-      example: "git commit, git push, git merge"
-    },
-    {
-      term: "Sass/SCSS",
-      category: "Styling",
-      definition: "Syntactically Awesome Style Sheets - a CSS preprocessor that adds features like variables and nesting.",
-      example: "$primary-color: #333; .nav { color: $primary-color; }"
-    }
-  ];
+  {
+    term: "Node.js",
+    category: "Programming",
+    definition: "A JavaScript runtime built on Chrome's V8 engine used for building scalable network applications.",
+    example: "const http = require('http');"
+  },
+  {
+    term: "Express.js",
+    category: "Framework",
+    definition: "A minimal and flexible Node.js web application framework that provides robust features for building APIs and web servers.",
+    example: "app.get('/api', (req, res) => res.send('Hello'))"
+  },
+  {
+    term: "PHP",
+    category: "Programming",
+    definition: "A general-purpose scripting language especially suited to web development and server-side scripting.",
+    example: "<?php echo 'Hello World'; ?>"
+  },
+  {
+    term: "Laravel",
+    category: "Framework",
+    definition: "A PHP web application framework with expressive, elegant syntax for tasks like routing, authentication, and caching.",
+    example: "Route::get('/users', [UserController::class, 'index']);"
+  },
+  {
+    term: "Python",
+    category: "Programming",
+    definition: "A versatile and easy-to-read language widely used for backend development, scripting, and automation.",
+    example: "def hello(): return 'Hello World'"
+  },
+  {
+    term: "Django",
+    category: "Framework",
+    definition: "A high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+    example: "urlpatterns = [ path('admin/', admin.site.urls) ]"
+  },
+  {
+    term: "Java",
+    category: "Programming",
+    definition: "A class-based, object-oriented programming language used for building robust back-end systems.",
+    example: "public class HelloWorld { public static void main(String[] args) { System.out.println('Hello'); }}"
+  },
+  {
+    term: "Spring Boot",
+    category: "Framework",
+    definition: "A framework that simplifies the bootstrapping and development of Java back-end applications.",
+    example: "@RestController public class HelloController { @GetMapping('/') String home() { return 'Hello'; }}"
+  },
+  {
+    term: "MySQL",
+    category: "Data",
+    definition: "An open-source relational database management system commonly used in web applications.",
+    example: "SELECT * FROM users;"
+  },
+  {
+    term: "MongoDB",
+    category: "Data",
+    definition: "A NoSQL database that stores data in flexible, JSON-like documents.",
+    example: "db.users.find({ name: 'John' });"
+  },
+  {
+    term: "PostgreSQL",
+    category: "Data",
+    definition: "An advanced, open-source relational database known for reliability and support for complex queries.",
+    example: "SELECT * FROM employees WHERE age > 30;"
+  },
+  {
+    term: "JWT",
+    category: "Concepts",
+    definition: "JSON Web Tokens - a compact way to securely transmit information between parties as a JSON object.",
+    example: "Authorization: Bearer <token>"
+  },
+  {
+    term: "REST API",
+    category: "Concepts",
+    definition: "An architectural style for designing networked applications using stateless communication via HTTP.",
+    example: "GET /api/products/1"
+  },
+  {
+    term: "CRUD",
+    category: "Concepts",
+    definition: "Create, Read, Update, Delete - the basic operations for managing data in a database or API.",
+    example: "POST /users, GET /users/1, PUT /users/1, DELETE /users/1"
+  },
+  {
+    term: "ORM",
+    category: "Concepts",
+    definition: "Object-Relational Mapping - a technique that connects object-oriented code with relational databases.",
+    example: "User.objects.create(name='Alice')"
+  },
+  {
+    term: "Docker",
+    category: "Tools",
+    definition: "A platform that uses OS-level virtualization to deliver software in packages called containers.",
+    example: "docker run -p 3000:3000 myapp"
+  },
+  {
+    term: "Postman",
+    category: "Tools",
+    definition: "An API platform used to build, test, and document APIs quickly and efficiently.",
+    example: "GET request to http://localhost:3000/api/products"
+  },
+  {
+    term: "Redis",
+    category: "Tools",
+    definition: "An in-memory data structure store used as a database, cache, and message broker.",
+    example: "SET user:1 'John'; GET user:1"
+  }
+];
 
-const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Concepts', 'Data', 'Tools'];
+const categories = ['All', 'Programming', 'Framework', 'Concepts', 'Data', 'Tools'];
 
   const filteredTerms = terms.filter(term => {
     const matchesSearch = term.term.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -127,6 +127,7 @@ const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Con
     const matchesCategory = selectedCategory === 'All' || term.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+
     return (
         <div
           className="position-relative min-vh-100 d-flex overflow-hidden"
@@ -146,27 +147,27 @@ const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Con
             <h4 className="mb-4 fw-bold">My Progress</h4>
               <ul className="nav flex-column gap-3">
                 <li className="nav-item">
-                  <Link to="/FrontEndPage" className="nav-link text-white">
+                  <Link to="/BackEndPage" className="nav-link text-white">
                     📈 Progress
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/FrontEndCourses" className="nav-link text-white">
+                  <Link to="/BackEndCourses" className="nav-link text-white">
                     📚 Courses
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/Achievements" className="nav-link text-white">
+                  <Link to="/BackEndIdeas" className="nav-link text-white">
                     💡 Project Ideas
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/Terms" className="nav-link text-white">
+                  <Link to="/BackEndTerms" className="nav-link text-white">
                     📄 Terms
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/Settings" className="nav-link text-white">
+                  <Link to="/BackEndSettings" className="nav-link text-white">
                     ⚙️ Settings
                   </Link>
                 </li>
@@ -208,7 +209,7 @@ const categories = ['All', 'Markup', 'Styling', 'Programming', 'Framework', 'Con
               <div className="container-fluid">
                 <div className="row mb-3 mb-md-4">
                   <div className="col-12">
-                    <p className="lead mb-3 mb-md-4 fs-6 fs-md-5">Master the essential vocabulary of front-end development</p>
+                    <p className="lead mb-3 mb-md-4 fs-6 fs-md-5">Master the essential vocabulary of Back-end development</p>
               
                     <div className="row g-2 g-md-3 mb-3 mb-md-4">
                       <div className="col-12 col-sm-6 col-md-6">
@@ -422,4 +423,4 @@ function getCategoryColor(category) {
   return colors[category] || '#6c757d';
 }
 
-export default Terms;
+export default BackEndTerms;

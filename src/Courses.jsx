@@ -58,8 +58,8 @@ function Courses() {
                   <h4 className="text-info mb-3">Software Development</h4>
                   <ul className="list-unstyled">
                     <li><Link to="/FrontEndPage" className="course-link">🔹 Front-End Development</Link></li>
-                    <li><Link to="/" className="course-link">🔹 Back-End Development</Link></li>
-                    <li><Link to="/" className="course-link">🔹 Full-Stack Development</Link></li>
+                    <li><Link to="/BackEndPage" className="course-link">🔹 Back-End Development</Link></li>
+                    <li><Link to="/FullStackPage" className="course-link">🔹 Full-Stack Development</Link></li>
                     <li><Link to="/" className="course-link">🔹 Mobile App Development</Link></li>
                     <li><Link to="/" className="course-link">🔹 Game Development</Link></li>
                    </ul>
@@ -69,7 +69,7 @@ function Courses() {
                 <div className="p-4 bg-dark rounded shadow">
                   <h4 className="text-info mb-3">Tech Career Paths</h4>
                   <ul className="list-unstyled">
-                    <li><Link to="/" className="course-link">🔹 Data Analyst</Link></li>
+                    <li><Link to="/DataAnalystPage" className="course-link">🔹 Data Analyst</Link></li>
                     <li><Link to="/" className="course-link">🔹 Cloud Engineer</Link></li>
                     <li><Link to="/" className="course-link">🔹 DevOps Engineer</Link></li>
                     <li><Link to="/" className="course-link">🔹 Cybersecurity Specialist</Link></li>
