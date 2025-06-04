@@ -127,7 +127,7 @@ function MobilePage() {
           className="d-flex justify-content-between align-items-center mb-4"
           style={{ borderBottom: '1px solid', paddingLeft: '50px', paddingBottom: '10px' }}
         >
-          <h1 className="fw-bold m-0">🚀 Front-End Roadmap</h1>
+          <h1 className="fw-bold m-0">🚀 Mobile App Roadmap</h1>
 
           <div className="d-flex gap-2">
             <a href="https://github.com/alecxander567/Progress-Tracker" target="_blank" rel="noopener noreferrer" className="text-white" style={{ fontSize: '1.5rem' }}>
