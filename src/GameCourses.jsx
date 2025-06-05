@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import React, { useState  } from 'react';
 
 
-function FullStackCourses() {
+function GameCourses() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
@@ -26,27 +26,27 @@ function FullStackCourses() {
                 <h4 className="mb-4 fw-bold">My Progress</h4>
                   <ul className="nav flex-column gap-3">
                     <li className="nav-item">
-                      <Link to="/FullStackPage" className="nav-link text-white">
+                      <Link to="/GamePage" className="nav-link text-white">
                         📈 Progress
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/FullStackCourses" className="nav-link text-white">
+                      <Link to="/GameCourses" className="nav-link text-white">
                         📚 Courses
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/FullStackIdeas" className="nav-link text-white">
+                      <Link to="/GameIdeas" className="nav-link text-white">
                         💡 Project Ideas
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/FullStackTerms" className="nav-link text-white">
+                      <Link to="/GameTerms" className="nav-link text-white">
                         📄 Terms
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/FullStackSettings" className="nav-link text-white">
+                      <Link to="/GameSettings" className="nav-link text-white">
                         ⚙️ Settings
                       </Link>
                     </li>
@@ -86,68 +86,51 @@ function FullStackCourses() {
                     </div>
                 </header>
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                    {[
-                        {
-                            title: "HTML, CSS",
-                            description: "Master the foundation of full stack development with this quick introduction to HTML, CSS",
-                            href: "https://youtu.be/HGTJBPNC-Gw?si=RbwaxaN7P_oGlFPz",
-                            icons: [
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-                            ]
-                        },
-                        {
-                            title: "JavaScript Crash Course",
-                            description: "Master the foundation of full stack development with this quick introduction to JavaScript.",
-                            href: "https://youtu.be/lfmg-EJ8gm4?si=dvWIF7-dT0Wx8CzH",
-                            icons: [
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                            ]
-                        },
-                        {
-                            title: "React Crash Course",
-                            description: "Learn how to build modern and dynamic UIs using React — a must-have for full stack developers.",
-                            href: "https://youtu.be/CgkZ7MvWUAA?si=LM-H4ia7a2FXY6LW",
-                            icons: [
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                            ]
-                        },
-                        {
-                            title: "Node.js & Express.js Tutorial",
-                            description: "Understand how to build server-side applications using Node.js and Express.",
-                            href: "https://youtu.be/Oe421EPjeBE?si=XaKMSSMyA6kA5eM-",
-                            icons: [
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                            ]
-                        },
-                        {
-                            title: "MongoDB Crash Course",
-                            description: "Learn how to integrate a NoSQL database in your full stack apps using MongoDB.",
-                            href: "https://youtu.be/c2M-rlkkT5o?si=A8WVF1Y3tUUncKq8",
-                            icons: [
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                            ]
-                        },
-                        {
-                            title: "Git & GitHub for Developers",
-                            description: "Learn how to manage your projects with Git and collaborate with others on GitHub.",
-                            href: "https://youtu.be/zTjRZNkhiEU?si=Sc-MaqunIhjuFEU6",
-                            icons: [
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                            ]
-                        },
-                        {
-                            title: "Full Stack App Deployment",
-                            description: "Deploy your full stack app to the web using platforms like Vercel, Netlify, or Heroku.",
-                            href: "https://youtu.be/71wSzpLyW9k?si=r1KoBC5ZsCvCN1gF",
-                            icons: [
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg"
-                            ]
-                        }
-                    ].map(({ title, description, href, icons }, index) => (
+                {[
+                    {
+                        title: "Unity for Beginners",
+                        description: "Start your game dev journey with Unity and learn the basics of game design using C#.",
+                        href: "https://youtu.be/gB1F9G0JXOo", 
+                        icons: [
+                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
+                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+                        ]
+                    },
+                    {
+                        title: "Unreal Engine 5 Crash Course",
+                        description: "Learn how to create AAA-quality games with Unreal Engine 5 and C++.",
+                        href: "https://youtu.be/LsNW4FPHuZE?si=CyyMJCPZrxf-rb3M",
+                        icons: [
+                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg",
+                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+                        ]
+                    },
+                    {
+                        title: "Godot Engine Basics",
+                        description: "Build 2D and 3D games with Godot using GDScript and C#.",
+                        href: "https://youtu.be/S8lMTwSRoRg?si=UA7Sib4-dyygNdW8",
+                        icons: [
+                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg"
+                        ]
+                    },
+                    {
+                        title: "Blender for Game Development",
+                        description: "Learn 3D modeling in Blender and create assets for your games.",
+                        href: "https://youtu.be/TPrnSACiTJ4",
+                        icons: [
+                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg"
+                        ]
+                    },
+                    {
+                        title: "Version Control with Git",
+                        description: "Learn how to manage your game projects using Git and GitHub.",
+                        href: "https://youtu.be/zTjRZNkhiEU?si=fPB8OmL_uquu5zr7",
+                        icons: [
+                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+                            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        ]
+                    },
+                ].map(({ title, description, href, icons }, index) => (
                     <div className="col" key={index}>
                         <div className="card h-100 text-white" style={{ backgroundColor: '#1c0033' }}>
                             <div className="card-body d-flex flex-column">
@@ -162,19 +145,19 @@ function FullStackCourses() {
                                     />
                                 ))}
                             </div>
-                            <h5 className="card-title">{title}</h5>
-                            <p className="card-text">{description}</p>
-                            <a
-                                href={href}
-                                className="btn btn-outline-light mt-auto"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Watch Now
-                            </a>
-                        </div>
+                        <h5 className="card-title">{title}</h5>
+                        <p className="card-text">{description}</p>
+                        <a
+                            href={href}
+                            className="btn btn-outline-light mt-auto"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Watch Now
+                        </a>
                     </div>
                 </div>
+            </div>
             ))}
         </div>
 
@@ -239,4 +222,4 @@ function FullStackCourses() {
     );
 }
 
-export default FullStackCourses;
+export default GameCourses;

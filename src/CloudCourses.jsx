@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import React, { useState  } from 'react';
 
 
-function BackEndCourses() {
+function CloudCourses() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
@@ -26,27 +26,27 @@ function BackEndCourses() {
                 <h4 className="mb-4 fw-bold">My Progress</h4>
                   <ul className="nav flex-column gap-3">
                     <li className="nav-item">
-                      <Link to="/BackEndPage" className="nav-link text-white">
+                      <Link to="/CloudPage" className="nav-link text-white">
                         📈 Progress
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/BackEndCourses" className="nav-link text-white">
+                      <Link to="/CloudCourses" className="nav-link text-white">
                         📚 Courses
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/BackEndIdeas" className="nav-link text-white">
+                      <Link to="/CloudIdeas" className="nav-link text-white">
                         💡 Project Ideas
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/BackEndTerms" className="nav-link text-white">
+                      <Link to="/CloudTerms" className="nav-link text-white">
                         📄 Terms
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/BackEndSettings" className="nav-link text-white">
+                      <Link to="/CloudSettings" className="nav-link text-white">
                         ⚙️ Settings
                       </Link>
                     </li>
@@ -88,111 +88,114 @@ function BackEndCourses() {
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     {[
                         {
-                            title: "Java Crash Course",
-                            description: "Learn Java syntax, object-oriented programming, and build back-end apps.",
-                            href: "https://youtu.be/xTtL8E4LzTQ?si=4iLkxDVCzhazSwFN",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"]
+                            title: "AWS Full Course",
+                            description: "Master Amazon Web Services and learn how to deploy and scale cloud applications.",
+                            href: "https://youtu.be/zA8guDqfv40?si=5meoPJopglZ2h4R2",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"]
                         },
                         {
-                            title: "Spring Boot Tutorial",
-                            description: "Build modern REST APIs and full back-end systems with Spring Boot.",
-                            href: "https://youtu.be/gJrjgg1KVL4?si=_t256S_TA9Xl1a_a",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"]
+                            title: "Google Cloud Platform (GCP) Course",
+                            description: "Get started with GCP and learn core services, storage, and deployment.",
+                            href: "https://www.youtube.com/live/IUU6OR8yHCc?si=vYB9FrpbMqipEfPe",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"]
                         },
                         {
-                            title: "Python Crash Course",
-                            description: "Master Python basics and build the foundation for back-end development.",
-                            href: "https://youtu.be/ix9cRaBkVe0?si=oOM1uETl8kI1XDM5",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"]
+                            title: "Microsoft Azure Tutorial",
+                            description: "Understand Azure cloud platform and create scalable cloud solutions.",
+                            href: "https://youtu.be/tDuruX7XSac?si=jZ-0nc_vqKqZkoUw",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"]
                         },
                         {
-                            title: "Django Full Course",
-                            description: "Learn Django to build secure and scalable back-end systems with Python.",
-                            href: "https://youtu.be/F5mRW0jo-U4",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"]
+                            title: "Terraform for Beginners",
+                            description: "Learn infrastructure as code using Terraform and automate cloud setup.",
+                            href: "https://youtu.be/SLB_c_ayRMo",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"]
                         },
                         {
-                            title: "PHP Crash Course",
-                            description: "Understand PHP for dynamic websites and back-end server scripting.",
-                            href: "https://youtu.be/zZ6vybT1HQs?si=X0GTtf77r8H-IKyo",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"]
-                        },
-                        {
-                            title: "Laravel Full Course",
-                            description: "Build modern PHP web applications using the Laravel framework.",
-                            href: "https://youtu.be/ImtZ5yENzgE",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"]
-                        },
-                        {
-                            title: "Node.js Crash Course",
-                            description: "Use JavaScript on the server to create fast and scalable back-end systems.",
-                            href: "https://youtu.be/fBNz5xF-Kx4",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"]
-                        },
-                        {
-                            title: "Express.js Tutorial",
-                            description: "Use Express.js with Node to build powerful REST APIs easily.",
-                            href: "https://youtu.be/L72fhGm1tfE",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"]
-                        },
-                        {
-                            title: "MySQL Crash Course",
-                            description: "Learn how to work with relational databases and write SQL queries.",
-                            href: "https://youtu.be/5OdVJbNCSso?si=G01VjSUfmCjk8KFE",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"]
-                        },
-                        {
-                            title: "MongoDB Full Course",
-                            description: "Understand NoSQL and how to manage data with MongoDB.",
-                            href: "https://youtu.be/c2M-rlkkT5o?si=lJ5Ag7OGe4jsGi8P",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"]
-                        },
-                        {
-                            title: "Docker for Beginners",
-                            description: "Learn Docker to containerize your applications for easy deployment.",
+                            title: "Docker for DevOps",
+                            description: "Use Docker to containerize applications for consistent deployment.",
                             href: "https://youtu.be/3c-iBn73dDE",
                             icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"]
                         },
                         {
-                            title: "Git & GitHub for Beginners",
-                            description: "Track your code changes and collaborate effectively using Git.",
-                            href: "https://youtu.be/zTjRZNkhiEU?si=OLKSof69qN6Y5d8u",
+                            title: "Kubernetes Crash Course",
+                            description: "Master Kubernetes for container orchestration and microservices.",
+                            href: "https://youtu.be/X48VuDVv0do",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"]
+                        },
+                        {
+                            title: "Linux for Cloud Engineers",
+                            description: "Learn essential Linux commands and scripting for managing cloud servers.",
+                            href: "https://youtu.be/IVquJh3DXUA",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"]
+                        },
+                        {
+                            title: "Bash Scripting Full Course",
+                            description: "Automate cloud infrastructure tasks with Bash scripting.",
+                            href: "https://youtu.be/tK9Oc6AEnR4?si=MzukHfR9o1zRkx20",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"]
+                        },
+                        {
+                            title: "CI/CD with Jenkins",
+                            description: "Build continuous integration pipelines using Jenkins for automation.",
+                            href: "https://www.youtube.com/live/h9K1NnqwUvE?si=bPkLX5zrHQj0W9r1",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"]
+                        },
+                        {
+                            title: "Ansible for Beginners",
+                            description: "Learn Ansible for automating configuration and provisioning tasks.",
+                            href: "https://www.youtube.com/live/9Ua2b06oAr4?si=JUSZknV9LCYghFe2",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg"]
+                        },
+                        {
+                            title: "Prometheus & Grafana",
+                            description: "Monitor cloud systems using Prometheus and visualize with Grafana.",
+                            href: "https://youtu.be/h4Sl21AKiDg",
+                            icons: [
+                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
+                            ]
+                        },
+                        {
+                            title: "Git & GitHub for DevOps",
+                            description: "Use Git and GitHub for version control and collaboration in cloud projects.",
+                            href: "https://youtu.be/zTjRZNkhiEU?si=tdITBh8-e9uf5Q51",
                             icons: [
                                 "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
                                 "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                             ]
                         }
                     ].map(({ title, description, href, icons }, index) => (
-                        <div className="col" key={index}>
-                            <div className="card h-100 text-white" style={{ backgroundColor: '#1c0033' }}>
-                                <div className="card-body d-flex flex-column">
-                                    <div className="d-flex align-items-center mb-2">
-                                        {icons.map((icon, i) => (
-                                            <img
-                                                key={i}
-                                                src={icon}
-                                                width="40"
-                                                alt="tech-icon"
-                                                className={i !== 0 ? "ms-2" : ""}
-                                            />
-                                        ))}
-                                    </div>
-                                    <h5 className="card-title">{title}</h5>
-                                    <p className="card-text">{description}</p>
-                                    <a
-                                        href={href}
-                                        className="btn btn-outline-light mt-auto"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Watch Now
-                                    </a>
+                    <div className="col" key={index}>
+                        <div className="card h-100 text-white" style={{ backgroundColor: '#1c0033' }}>
+                            <div className="card-body d-flex flex-column">
+                                <div className="d-flex align-items-center mb-2">
+                                    {icons.map((icon, i) => (
+                                        <img
+                                            key={i}
+                                            src={icon}
+                                            width="40"
+                                            alt="tech-icon"
+                                            className={i !== 0 ? "ms-2" : ""}
+                                        />
+                                    ))}
                                 </div>
+                                <h5 className="card-title">{title}</h5>
+                                <p className="card-text">{description}</p>
+                                <a
+                                    href={href}
+                                    className="btn btn-outline-light mt-auto"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Watch Now
+                                </a>
                             </div>
                         </div>
-                        ))}
                     </div>
-                 </main>
+                ))}
+            </div>
+
+        </main>
 
         <style>{`
             @keyframes waveBG {
@@ -253,4 +256,4 @@ function BackEndCourses() {
     );
 }
 
-export default BackEndCourses;
+export default CloudCourses;

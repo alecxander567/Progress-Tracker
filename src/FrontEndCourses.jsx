@@ -123,7 +123,7 @@ function FrontEndCourses() {
                     {
                         title: "Version Control with Git & GitHub",
                         description: "Learn Git to manage your code, collaborate with others, and push to GitHub!",
-                        href: "https://youtu.be/tRZGeaHPoaw",
+                        href: "https://youtu.be/zTjRZNkhiEU?si=kRaK4Vj5D24rC7ew",
                         icons: [
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"

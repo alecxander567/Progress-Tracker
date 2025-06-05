@@ -61,7 +61,7 @@ function Courses() {
                     <li><Link to="/BackEndPage" className="course-link">🔹 Back-End Development</Link></li>
                     <li><Link to="/FullStackPage" className="course-link">🔹 Full-Stack Development</Link></li>
                     <li><Link to="/MobilePage" className="course-link">🔹 Mobile App Development</Link></li>
-                    <li><Link to="/" className="course-link">🔹 Game Development</Link></li>
+                    <li><Link to="/GamePage" className="course-link">🔹 Game Development</Link></li>
                    </ul>
                 </div>
                </div>
@@ -70,10 +70,10 @@ function Courses() {
                   <h4 className="text-info mb-3">Tech Career Paths</h4>
                   <ul className="list-unstyled">
                     <li><Link to="/DataAnalystPage" className="course-link">🔹 Data Analyst</Link></li>
-                    <li><Link to="/" className="course-link">🔹 Cloud Engineer</Link></li>
-                    <li><Link to="/" className="course-link">🔹 DevOps Engineer</Link></li>
-                    <li><Link to="/" className="course-link">🔹 Cybersecurity Specialist</Link></li>
-                    <li><Link to="/" className="course-link">🔹 AI/ML Engineer</Link></li>
+                    <li><Link to="/CloudPage" className="course-link">🔹 Cloud Engineer</Link></li>
+                    <li><Link to="/DevOpsPage" className="course-link">🔹 DevOps Engineer</Link></li>
+                    <li><Link to="/CyberSecurityPage" className="course-link">🔹 Cybersecurity Specialist</Link></li>
+                    <li><Link to="/AIMLPage" className="course-link">🔹 AI/ML Engineer</Link></li>
                   </ul>
                  </div>
                 </div>

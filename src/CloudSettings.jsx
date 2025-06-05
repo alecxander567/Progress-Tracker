@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
 
-function BackEndSettings() {
+function CloudSettings() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -25,27 +25,27 @@ function BackEndSettings() {
                 <h4 className="mb-4 fw-bold">My Progress</h4>
                     <ul className="nav flex-column gap-3">
                         <li className="nav-item">
-                            <Link to="/BackEndPage" className="nav-link text-white">
+                            <Link to="/CloudPage" className="nav-link text-white">
                                 📈 Progress
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/BackEndCourses" className="nav-link text-white">
+                            <Link to="/CloudCourses" className="nav-link text-white">
                                 📚 Courses
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/BackEndIdeas" className="nav-link text-white">
+                            <Link to="/CloudIdeas" className="nav-link text-white">
                                 💡 Project Ideas
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/BackEndTerms" className="nav-link text-white">
+                            <Link to="/CloudTerms" className="nav-link text-white">
                                 📄 Terms
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/BackEndSettings" className="nav-link text-white">
+                            <Link to="/CloudSettings" className="nav-link text-white">
                                 ⚙️ Settings
                             </Link>
                         </li>
@@ -159,4 +159,4 @@ function BackEndSettings() {
   );
 }
 
-export default BackEndSettings;
+export default CloudSettings;

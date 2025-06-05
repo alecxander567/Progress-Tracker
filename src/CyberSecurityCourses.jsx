@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import React, { useState  } from 'react';
 
 
-function BackEndCourses() {
+function CyberSecurityCourses() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
@@ -18,39 +18,39 @@ function BackEndCourses() {
               <aside
                 className={`d-flex flex-column p-4 ${sidebarOpen ? 'open' : ''}`}
                 style={{
-                  backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                  backdropFilter: 'blur(10px)',
-                  zIndex: 2,
+                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                    backdropFilter: 'blur(10px)',
+                    zIndex: 2,
                 }}
-              >
+                >
                 <h4 className="mb-4 fw-bold">My Progress</h4>
-                  <ul className="nav flex-column gap-3">
+                    <ul className="nav flex-column gap-3">
                     <li className="nav-item">
-                      <Link to="/BackEndPage" className="nav-link text-white">
+                        <Link to="/CyberSecurityPage" className="nav-link text-white">
                         📈 Progress
-                      </Link>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/BackEndCourses" className="nav-link text-white">
+                        <Link to="/CyberSecurityCourses" className="nav-link text-white">
                         📚 Courses
-                      </Link>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/BackEndIdeas" className="nav-link text-white">
+                        <Link to="/CyberSecurityIdeas" className="nav-link text-white">
                         💡 Project Ideas
-                      </Link>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/BackEndTerms" className="nav-link text-white">
+                        <Link to="/CyberSecurityTerms" className="nav-link text-white">
                         📄 Terms
-                      </Link>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/BackEndSettings" className="nav-link text-white">
+                        <Link to="/CyberSecuritySettings" className="nav-link text-white">
                         ⚙️ Settings
-                      </Link>
+                        </Link>
                     </li>
-                  </ul>
+                    </ul>
                 </aside>
 
                 <button
@@ -88,79 +88,70 @@ function BackEndCourses() {
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     {[
                         {
-                            title: "Java Crash Course",
-                            description: "Learn Java syntax, object-oriented programming, and build back-end apps.",
-                            href: "https://youtu.be/xTtL8E4LzTQ?si=4iLkxDVCzhazSwFN",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"]
+                            title: "Network Security Full Course",
+                            description: "Learn the fundamentals of securing networks and understanding common attacks.",
+                            href: "https://youtu.be/tNWj5uGIqok?si=gSiDzRbaMD0VZz8E",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"]
                         },
                         {
-                            title: "Spring Boot Tutorial",
-                            description: "Build modern REST APIs and full back-end systems with Spring Boot.",
-                            href: "https://youtu.be/gJrjgg1KVL4?si=_t256S_TA9Xl1a_a",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"]
+                            title: "Ethical Hacking for Beginners",
+                            description: "Understand ethical hacking concepts and penetration testing techniques.",
+                            href: "https://youtu.be/3Kq1MIfTWCE",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"]
                         },
                         {
-                            title: "Python Crash Course",
-                            description: "Master Python basics and build the foundation for back-end development.",
-                            href: "https://youtu.be/ix9cRaBkVe0?si=oOM1uETl8kI1XDM5",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"]
+                            title: "Kali Linux Tutorial",
+                            description: "Master tools like Nmap, Wireshark, and Metasploit in Kali Linux.",
+                            href: "https://youtu.be/lZAoFs75_cs?si=X5g1r77Tx0_vQ6XP",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"]
                         },
                         {
-                            title: "Django Full Course",
-                            description: "Learn Django to build secure and scalable back-end systems with Python.",
-                            href: "https://youtu.be/F5mRW0jo-U4",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"]
+                            title: "Wireshark for Beginners",
+                            description: "Analyze network packets and detect suspicious activities using Wireshark.",
+                            href: "https://youtu.be/TkCSr30UojM",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"]
                         },
                         {
-                            title: "PHP Crash Course",
-                            description: "Understand PHP for dynamic websites and back-end server scripting.",
-                            href: "https://youtu.be/zZ6vybT1HQs?si=X0GTtf77r8H-IKyo",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"]
+                            title: "Metasploit Framework Crash Course",
+                            description: "Explore Metasploit for penetration testing and vulnerability exploitation.",
+                            href: "https://youtu.be/3Kq1MIfTWCE?t=5400",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"]
                         },
                         {
-                            title: "Laravel Full Course",
-                            description: "Build modern PHP web applications using the Laravel framework.",
-                            href: "https://youtu.be/ImtZ5yENzgE",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"]
+                            title: "Cybersecurity Essentials",
+                            description: "Get introduced to core cybersecurity principles, frameworks, and best practices.",
+                            href: "https://youtu.be/inWWhr5tnEA",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"]
                         },
                         {
-                            title: "Node.js Crash Course",
-                            description: "Use JavaScript on the server to create fast and scalable back-end systems.",
-                            href: "https://youtu.be/fBNz5xF-Kx4",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"]
+                            title: "Cryptography Crash Course",
+                            description: "Learn encryption algorithms, hashing, and how cryptography secures data.",
+                            href: "https://youtu.be/ZghMPWGXexs",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"]
                         },
                         {
-                            title: "Express.js Tutorial",
-                            description: "Use Express.js with Node to build powerful REST APIs easily.",
-                            href: "https://youtu.be/L72fhGm1tfE",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"]
+                            title: "Burp Suite Tutorial",
+                            description: "Use Burp Suite to test web app vulnerabilities like XSS and SQL Injection.",
+                            href: "https://youtu.be/QiNLNDSLuJY?si=_WAGcLSF4ifOTBX5",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"]
                         },
                         {
-                            title: "MySQL Crash Course",
-                            description: "Learn how to work with relational databases and write SQL queries.",
-                            href: "https://youtu.be/5OdVJbNCSso?si=G01VjSUfmCjk8KFE",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"]
+                            title: "OSINT Basics",
+                            description: "Leverage open-source intelligence tools to gather information ethically.",
+                            href: "https://youtu.be/Sa5LbKqCmFI?si=SSJa61r08yc7REG5",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"]
                         },
                         {
-                            title: "MongoDB Full Course",
-                            description: "Understand NoSQL and how to manage data with MongoDB.",
-                            href: "https://youtu.be/c2M-rlkkT5o?si=lJ5Ag7OGe4jsGi8P",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"]
+                            title: "Digital Forensics Crash Course",
+                            description: "Explore the basics of digital forensics and evidence handling.",
+                            href: "https://youtu.be/JNIUeGMax-U?si=g2QNOyvQ4sX7IqxL",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"]
                         },
                         {
-                            title: "Docker for Beginners",
-                            description: "Learn Docker to containerize your applications for easy deployment.",
-                            href: "https://youtu.be/3c-iBn73dDE",
-                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"]
-                        },
-                        {
-                            title: "Git & GitHub for Beginners",
-                            description: "Track your code changes and collaborate effectively using Git.",
-                            href: "https://youtu.be/zTjRZNkhiEU?si=OLKSof69qN6Y5d8u",
-                            icons: [
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-                                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                            ]
+                            title: "Introduction to Nmap",
+                            description: "Learn how to scan networks and discover hosts and services using Nmap.",
+                            href: "https://youtu.be/NYgDzO8iQJ0?si=LxQIflV9ghvqeIK2",
+                            icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"]
                         }
                     ].map(({ title, description, href, icons }, index) => (
                         <div className="col" key={index}>
@@ -190,9 +181,11 @@ function BackEndCourses() {
                                 </div>
                             </div>
                         </div>
-                        ))}
-                    </div>
-                 </main>
+                    ))}
+                </div>
+
+
+        </main>
 
         <style>{`
             @keyframes waveBG {
@@ -253,4 +246,4 @@ function BackEndCourses() {
     );
 }
 
-export default BackEndCourses;
+export default CyberSecurityCourses;

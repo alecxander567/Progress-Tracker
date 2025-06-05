@@ -132,7 +132,7 @@ function MobileCourses() {
                     {
                         title: "Git & GitHub for Mobile Dev",
                         description: "Use Git and GitHub to track and collaborate on mobile projects.",
-                        href: "https://youtu.be/RGOj5yH7evk?si=HCaSl-TW08aOVLe2",
+                        href: "https://youtu.be/zTjRZNkhiEU?si=SGdu9tB2plAOvgoX",
                         icons: [
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
