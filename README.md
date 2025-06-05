@@ -6,4 +6,3 @@ This project aims to help others help keep track of their progress in learning f
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,bootstrap)](https://skillicons.dev)
 
-Project in progress...
