@@ -1,109 +1,118 @@
-import { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { Link } from "react-router-dom";
 
 function DataAnalystSettings() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-        <div
-            className="position-relative min-vh-100 d-flex overflow-hidden"
-            style={{
-                background: 'linear-gradient(to bottom, #2e003e, #12002d)',
-                color: 'white',
-            }}
+    <div
+      className="position-relative min-vh-100 d-flex overflow-hidden"
+      style={{
+        background: "linear-gradient(to bottom, #2e003e, #12002d)",
+        color: "white",
+      }}
+    >
+      <aside
+        className={`d-flex flex-column p-4 ${sidebarOpen ? "open" : ""}`}
+        style={{
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
+          backdropFilter: "blur(10px)",
+          zIndex: 2,
+        }}
+      >
+        <h4 className="mb-4 fw-bold">My Progress</h4>
+        <ul className="nav flex-column gap-3">
+          <li className="nav-item">
+            <Link to="/DataAnalystPage" className="nav-link text-white">
+              📈 Progress
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/DataAnalystCourses" className="nav-link text-white">
+              📚 Courses
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/DataProjectIdeas" className="nav-link text-white">
+              💡 Project Ideas
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/DataAnalystTerms" className="nav-link text-white">
+              📄 Terms
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/DataAnalystSettings" className="nav-link text-white">
+              ⚙️ Settings
+            </Link>
+          </li>
+        </ul>
+      </aside>
+
+      <button
+        className="btn btn-outline-light d-md-none position-fixed top-0 start-0 m-3 sidebar-toggle-btn"
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+      >
+        <i className="fas fa-bars"></i>
+      </button>
+
+      <main
+        className="flex-grow-1 p-4 d-flex flex-column"
+        style={{ overflowY: "auto" }}
+      >
+        <header
+          className="d-flex justify-content-between align-items-center mb-4"
+          style={{
+            borderBottom: "1px solid",
+            paddingLeft: "50px",
+            paddingBottom: "10px",
+          }}
         >
-            <aside
-                className={`d-flex flex-column p-4 ${sidebarOpen ? 'open' : ''}`}
-                style={{
-                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                    backdropFilter: 'blur(10px)',
-                    zIndex: 2,
-                }}
+          <h1 className="fw-bold m-0">⚙️ Settings</h1>
+
+          <div className="d-flex gap-2 me-4">
+            <a
+              href="https://github.com/alecxander567/Progress-Tracker"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+              style={{ fontSize: "1.5rem" }}
             >
-                <h4 className="mb-4 fw-bold">My Progress</h4>
-                    <ul className="nav flex-column gap-3">
-                        <li className="nav-item">
-                            <Link to="/DataAnalystPage" className="nav-link text-white">
-                                📈 Progress
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/DataAnalystCourses" className="nav-link text-white">
-                                📚 Courses
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/DataProjectIdeas" className="nav-link text-white">
-                                💡 Project Ideas
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/DataAnalystTerms" className="nav-link text-white">
-                                📄 Terms
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/DataAnalystSettings" className="nav-link text-white">
-                                ⚙️ Settings
-                            </Link>
-                        </li>
-                    </ul>
-                </aside>
-
-            <button
-                className="btn btn-outline-light d-md-none position-fixed top-0 start-0 m-3 sidebar-toggle-btn"
-                onClick={() => setSidebarOpen(!sidebarOpen)}
+              <i className="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/alec.xander.espaldon.2024/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+              style={{ fontSize: "1.5rem" }}
             >
-                <i className="fas fa-bars"></i>
-            </button>
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.reddit.com/user/Historical_Rub8018/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+              style={{ fontSize: "1.5rem" }}
+            >
+              <i className="fab fa-reddit"></i>
+            </a>
+          </div>
+        </header>
 
-            <main className="flex-grow-1 p-4 d-flex flex-column" style={{ overflowY: 'auto' }}>
-                <header
-                    className="d-flex justify-content-between align-items-center mb-4"
-                    style={{ borderBottom: '1px solid', paddingLeft: '50px', paddingBottom: '10px' }}
-                >
-                    <h1 className="fw-bold m-0">⚙️ Settings</h1>
+        <div className="flex-grow-1 d-flex justify-content-center align-items-center">
+          <Link to="/Courses" className="btn btn-outline-light px-4 py-2">
+            Change Career Path
+          </Link>
+        </div>
+      </main>
 
-                    <div className="d-flex gap-2 me-4">
-                        <a
-                            href="https://github.com/alecxander567/Progress-Tracker"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white"
-                            style={{ fontSize: '1.5rem' }}
-                        >
-                            <i className="fab fa-github"></i>
-                        </a>
-                        <a
-                            href="https://www.facebook.com/alec.xander.espaldon.2024/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white"
-                            style={{ fontSize: '1.5rem' }}
-                        >
-                            <i className="fab fa-facebook"></i>
-                        </a>
-                        <a
-                            href="https://www.reddit.com/user/Historical_Rub8018/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white"
-                            style={{ fontSize: '1.5rem' }}
-                        >
-                            <i className="fab fa-reddit"></i>
-                        </a>
-                    </div>
-                </header>
-
-                <div className="flex-grow-1 d-flex justify-content-center align-items-center">
-                    <Link to='/Courses' className="btn btn-outline-light px-4 py-2">Change Career Path</Link>
-                </div>
-            </main>
-
-            <style>
-                {`
+      <style>
+        {`
                     a.nav-link:hover {
                         background: #00ffee;
                         color: black !important;
@@ -153,9 +162,8 @@ function DataAnalystSettings() {
                     }
                 }
             `}
-    </style>
+      </style>
     </div>
-   
   );
 }
 
